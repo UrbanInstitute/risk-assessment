@@ -1,0 +1,97 @@
+body{
+	font-family: Lato;
+}
+.button{
+    text-transform: uppercase;
+    background: #d2d2d2;
+    display: inline-block;
+    padding: 11px;
+    margin-bottom: 30px;
+    margin-right: 10px;
+    color: #353535;
+    cursor: pointer;
+}
+.button.active, .button:hover{
+	background: #1696d2;
+	color: #fff;
+}
+#questions{
+
+}
+.question{
+	margin-bottom: 30px;
+}
+.question.hide{
+	display: none;
+}
+.question.disabled{
+	opacity: .4;
+	pointer-events: none;
+}
+.question.error .errorMark{
+	visibility: visible;
+}
+.question.error{
+	color: #db2b27;
+}
+.promptRow{
+	margin-bottom: 5px;
+}
+.qNum{
+    display: inline-block;
+    font-weight: bold;
+}
+.prompt{
+	display: inline;
+    margin-left: 5px;
+}
+.errorMark{
+	display: inline;
+	visibility: hidden;
+	margin-left: 2px;
+    font-size: 19px;
+}
+.option{
+	margin-bottom: 5px;
+	margin-left: 15px;
+	cursor: pointer;
+}
+.checkbox{
+	width: 10px;
+    height: 10px;
+    background: #d2d2d2;
+    display: inline-block;
+    border: 1px solid #d2d2d2;
+}
+.checkbox.active{
+    background: #1696d2;
+    border: 1px solid #1696d2;
+}
+.optVal{
+	display: inline;
+    margin-left: 10px;
+}
+
+#calculate{
+    text-transform: uppercase;
+    background: #1696d2;
+    display: inline-block;
+    padding: 11px;
+    margin-bottom: 30px;
+    margin-right: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+#calculate.disabled{
+	background-color: #d2d2d2;
+	color: #353535;
+	pointer-events: none;
+	opacity: .4;
+}
+#calculate.active, #calculate:hover{
+	background: #353535; 
+}
+#scoreText{
+	margin-bottom: 200px;
+    font-size: 40px;
+}

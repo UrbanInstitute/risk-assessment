@@ -1,0 +1,402 @@
+[
+	{
+		"question": "Age at frst conviction",
+		"options": [
+			{
+				"option": ">= 35",
+				"male": 0,
+				"female": 0
+			},
+			{
+				"option": "< 35, >= 25",
+				"male": 4,
+				"female": 5
+			},
+			{
+				"option": "< 25, >= 18",
+				"male": 8,
+				"female": 10
+			},
+			{
+				"option": "< 18",
+				"male": 12,
+				"female": 15
+			}
+		]
+	},
+	{
+		"question": "Age at time of assessment",
+		"options": [
+			{
+				"option": "> 60",
+				"male": 0,
+				"female": 0
+			},
+			{
+				"option": "> 50, <= 60",
+				"male": 6,
+				"female": 3
+			},
+			{
+				"option": "> 40, <= 50",
+				"male": 12,
+				"female": 6
+			},
+			{
+				"option": "> 29, <= 40",
+				"male": 18,
+				"female": 9
+			},
+			{
+				"option": "> 25, <= 29",
+				"male": 24,
+				"female": 12
+			},
+			{
+				"option": ">= 18, <= 25",
+				"male": 30,
+				"female": 15
+			}
+		]
+	},
+	{
+		"question": "Infraction convictions (any)",
+		"options": [
+			{
+				"option": "0",
+				"male": 0,
+				"female": 0
+			},
+			{
+				"option": "> 0, <= 1",
+				"male": 3,
+				"female": 2
+			},
+			{
+				"option": "> 1, <= 2",
+				"male": 6,
+				"female": 4
+			},
+			{
+				"option": ">2",
+				"male": 9,
+				"female": 6
+			}
+		]
+	},
+	{
+		"question": "Infraction convictions (serious and violent)",
+		"options": [
+			{
+				"option": "0",
+				"male": 0,
+				"female": 0
+			},
+			{
+				"option": "> 0, <= 1",
+				"male": 2,
+				"female": 2
+			},
+			{
+				"option": "> 1, <= 2",
+				"male": 4,
+				"female": 4
+			},
+			{
+				"option": ">2",
+				"male": 6,
+				"female": 6
+			}
+		]
+	},
+	{
+		"question": "Number of programs completed (any)",
+		"options": [
+			{
+				"option": "0",
+				"male": 0,
+				"female": 0
+			},
+			{
+				"option": "1",
+				"male": -3,
+				"female": -2
+			},
+			{
+				"option": "> 1, <= 3",
+				"male": -6,
+				"female": -4
+			},
+			{
+				"option": "> 3, <= 10",
+				"male": -9,
+				"female": -6
+			},
+			{
+				"option": "> 10",
+				"male": -12,
+				"female": -8
+			}
+		]
+	},
+	{
+		"question": "Number of technical or vocational courses",
+		"options": [
+			{
+				"option": "0",
+				"male": -2,
+				"female": -4
+			},
+			{
+				"option": "> 0, <= 1",
+				"male": -1,
+				"female": -2
+			},
+			{
+				"option": ">1",
+				"male": 0,
+				"female": 0
+			}
+		]
+	},
+	{
+		"question": "Federal industry employment (UNICOR)",
+		"options": [
+			{
+				"option": "Yes",
+				"male": false,
+				"female": -1
+			},
+			{
+				"option": "No",
+				"male": false,
+				"female": 0
+			}
+		]
+	},
+	{
+		"question": "Drug treatment while incarcerated",
+		"options": [
+			{
+				"option": "No need indicated",
+				"male": -6,
+				"female": -9
+			},
+			{
+				"option": "Completed residential drug treatment during incarceration",
+				"male": -4,
+				"female": -6
+			},
+			{
+				"option": "Completed drug treatment during incarceration",
+				"male": -2,
+				"female": -3
+			},
+			{
+				"option": "Need indicated but no treatment during incarceration",
+				"male": 0,
+				"female": 0
+			}
+		]
+	},
+	{
+		"question": "Drug education while incarcerated",
+		"options": [
+			{
+				"option": "No",
+				"male": 0,
+				"female": false
+			},
+			{
+				"option": "Yes",
+				"male": 4,
+				"female": false
+			}
+		]
+	},
+	{
+		"question": "Non-compliance with fnancial responsibility",
+		"options": [
+			{
+				"option": "No",
+				"male": false,
+				"female": 0
+			},
+			{
+				"option": "Yes",
+				"male": false,
+				"female": 3
+			}
+		]
+	},
+	{
+		"question": "Instant ofense violent",
+		"options": [
+			{
+				"option": "No",
+				"male": 0,
+				"female": false
+			},
+			{
+				"option": "Yes",
+				"male": 4,
+				"female": false
+			}
+		]
+	},
+	{
+		"question": "Sex ofender (Walsh)",
+		"options": [
+			{
+				"option": "No",
+				"male": 0,
+				"female": false
+			},
+			{
+				"option": "Yes",
+				"male": 1,
+				"female": false
+			}
+		]
+	},
+	{
+		"question": "BRAVO Initial: Criminal History Score",
+		"options": [
+			{
+				"option": "0-1 points",
+				"male": 0,
+				"female": 0
+			},
+			{
+				"option": "2-3 points",
+				"male": 6,
+				"female": 6
+			},
+			{
+				"option": "4-6 points",
+				"male": 12,
+				"female": 12
+			},
+			{
+				"option": "7-9 points",
+				"male": 18,
+				"female": 18
+			},
+			{
+				"option": "10-12 points",
+				"male": 24,
+				"female": 24
+			},
+			{
+				"option": "13+ points",
+				"male": 30,
+				"female": 30
+			}
+		]
+	},
+	{
+		"question": "BRAVO Initial: History of Violence",
+		"options": [
+			{
+				"option": "None",
+				"male": 0,
+				"female": 0
+			},
+			{
+				"option": ">10 years minor",
+				"male": 1,
+				"female": 1
+			},
+			{
+				"option": ">15 years serious",
+				"male": 2,
+				"female": 2
+			},
+			{
+				"option": "5-10 years minor",
+				"male": 3,
+				"female": 3
+			},
+			{
+				"option": "10-15 years serious",
+				"male": 4,
+				"female": 4
+			},
+			{
+				"option": "<5 years minor",
+				"male": 5,
+				"female": 5
+			},
+			{
+				"option": "5-10 years serious",
+				"male": 6,
+				"female": 6
+			},
+			{
+				"option": "<5 years serious",
+				"male": 7,
+				"female": 7
+			}
+		]
+	},
+	{
+		"question": "BRAVO Initial: History of Escapes",
+		"options": [
+			{
+				"option": "None",
+				"male": 0,
+				"female": 0
+			},
+			{
+				"option": ">10 years minor",
+				"male": 2,
+				"female": 2
+			},
+			{
+				"option": "5-10 years minor",
+				"male": 4,
+				"female": 4
+			},
+			{
+				"option": "<5 years minor or any serious",
+				"male": 6,
+				"female": 6
+			}
+		]
+	},
+	{
+		"question": "BRAVO Initial: Voluntary Surrender",
+		"options": [
+			{
+				"option": "Yes",
+				"male": -12,
+				"female": -9
+			},
+			{
+				"option": "No",
+				"male": 0,
+				"female": 0
+			}
+		]
+	},
+	{
+		"question": "BRAVO Initial: Education Score",
+		"options": [
+			{
+				"option": "HS degree or GED - Verifed",
+				"male": false,
+				"female": -2
+			},
+			{
+				"option": "Enrolled and progressing in GED",
+				"male": false,
+				"female": -1
+			},
+			{
+				"option": "No verifed degree and not participating in GED program",
+				"male": false,
+				"female": 0
+			}
+		]
+	}
+]
