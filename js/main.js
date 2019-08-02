@@ -42,6 +42,10 @@ function initControls(questions){
 }
 
 function showScore(){
+    var cutPoints = {
+        "male": {"minimum" : 10, "low": 33, "medium": 45 },
+        "female": {"minimum": 9, "low": 29, "medium": 45 }
+    }
     var qs = d3.selectAll(".question:not(.hide)")
     qs.classed("error", function(){
         return (d3.select(this).selectAll(".checkbox.active").nodes().length == 0)
@@ -57,8 +61,13 @@ function showScore(){
             score += datum[gender]
 
         })
-        console.log(score)
-        d3.select("#scoreText").text(["Score of", score].join(" "))
+        // console.log(score)
+        var category;
+        if(cutPoints[gender]["minimum"] > score) category = "(minimum)"
+        else if(cutPoints[gender]["low"] > score) category = "(low)"
+        else category = "(medium)"
+
+        d3.select("#scoreText").text(["Score of", score, category].join(" "))
 
 
     }else{
@@ -74,6 +83,7 @@ function buildQuestions(questions){
         .enter()
         .append("div")
         .attr("class", "question disabled")
+        // .attr("class", "question")
 
     var prompt = question.append("div")
         .attr("class", "promptRow")

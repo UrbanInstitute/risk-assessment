@@ -81,6 +81,7 @@ body{
     margin-right: 10px;
     color: #fff;
     cursor: pointer;
+    display: none;
 }
 #calculate.disabled{
 	background-color: #d2d2d2;
