@@ -4,19 +4,19 @@ function init() {
         initControls(questions)
     });
 }
- 
+
 function initControls(questions){
-    d3.selectAll(".button")
+    d3.selectAll(".selectSex.checkbox")
         .on("click", function(){
-            d3.selectAll(".button").classed("active", false);
+            d3.selectAll(".selectSex.checkbox").classed("active", false);
             d3.select(this).classed("active", true);
 
             d3.select("#calculate").classed("disabled", false)
 
             var gender = (d3.select(this).classed("male")) ? "male" : "female";
-
+console.log(gender);
             var question = d3.selectAll(".question")
-            
+
             question.classed("hide", function(d){
                     return (d.options.filter(function(o){ return o[gender] === false }).length != 0)
                 })
@@ -33,7 +33,7 @@ function initControls(questions){
                 })
 
             showScore()
-                
+
 
         })
 
@@ -53,7 +53,7 @@ function showScore(){
 
     if(d3.selectAll(".question.error").nodes().length == 0){
         var score = 0,
-            gender = (d3.select(".button.active").classed("male")) ? "male" : "female";
+            gender = (d3.select(".selectSex.checkbox.active").classed("male")) ? "male" : "female";
 
         qs.each(function(){
             // console.log(d)
@@ -90,7 +90,7 @@ function buildQuestions(questions){
         .attr("id", function(d,i){
             return "p" + i;
         })
-    
+
     prompt.append("div")
         .attr("class", "qNum")
         .text(function(d, i){ return (i+1) })

@@ -3,8 +3,20 @@
 <link rel="stylesheet" href="css/main.css" type="text/css">
 </head>
 <body>
-<div class = "button male">Male</div>
-<div class = "button female">Female</div>
+
+<div class="selectSexButtons">
+    <div class="instruction">Choose One:</div>
+    <div class = "option">
+        <div class="selectSex checkbox male"></div>
+        <div class="label">Male</div>
+    </div>
+    <div class = "option">
+        <div class="selectSex checkbox female"></div>
+        <div class="label">Female</div>
+    </div>
+    <p>Some text here</p>
+</div>
+
 <div id = "questions">
 </div>
 <div id = "calculate" class = "disabled">Get score</div>
@@ -13,7 +25,7 @@
 
 
 <script src="js/vendor/es6-promise.min.js"></script>
-<script src="js/vendor/es6-promise.auto.min.js"></script> 
+<script src="js/vendor/es6-promise.auto.min.js"></script>
 <script src = "js/vendor/d3.v5.min.js"></script>
 <script src = "js/main.js"></script>
 </body>
