@@ -57,6 +57,12 @@ body{
 }
 */
 
+section.quizBody {
+    position: relative;
+    /*width: 632px;*/
+    padding-left: 300px;
+}
+
 #questions{
 
 }
@@ -140,11 +146,36 @@ body{
 #calculate.active, #calculate:hover{
 	background: #353535;
 }
+
+
 #scoreText{
-	/*margin-bottom: 200px;*/
-    /*font-size: 40px;*/
     width: 226px;
     padding: 20px;
     background-color: #f7f7f7;
+    position: fixed;
+    top: 150px;
+    left: 0;
 
+}
+
+#scoreText .title {
+    color: #1696d2;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+#scoreText .patternResults,
+#scoreText .riskCategory {
+    margin-bottom: 30px;
+}
+
+#scoreText .label {
+    font-weight: bold;
+    margin: 3px 0;
+}
+
+#scoreText .riskScore,
+#scoreText .category {
+    color: #1696d2;
+    font-weight: bold;
 }

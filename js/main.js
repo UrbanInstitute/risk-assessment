@@ -63,11 +63,12 @@ function showScore(){
         })
         // console.log(score)
         var category;
-        if(cutPoints[gender]["minimum"] > score) category = "(minimum)"
-        else if(cutPoints[gender]["low"] > score) category = "(low)"
-        else category = "(medium)"
+        if(cutPoints[gender]["minimum"] > score) category = "Minimum"
+        else if(cutPoints[gender]["low"] > score) category = "Low"
+        else category = "Medium"
 
-        d3.select("#scoreText").text(["Score of", score, category].join(" "))
+        d3.select("#scoreText .riskScore").text(score);
+        d3.select("#scoreText .category").text(category);
 
 
     }else{
