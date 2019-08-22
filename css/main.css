@@ -60,7 +60,7 @@ body{
 section.quizBody {
     position: relative;
     /*width: 632px;*/
-    padding-left: 300px;
+    padding-left: 280px;
 }
 
 #questions{
@@ -150,12 +150,12 @@ section.quizBody {
 
 #scoreText{
     width: 226px;
-    padding: 20px;
+    padding: 30px;
     background-color: #f7f7f7;
     position: fixed;
     top: 150px;
     left: 0;
-
+    box-sizing: border-box;
 }
 
 #scoreText .title {

@@ -63,13 +63,16 @@ function showScore(){
         })
         // console.log(score)
         var category;
-        if(cutPoints[gender]["minimum"] > score) category = "Minimum"
-        else if(cutPoints[gender]["low"] > score) category = "Low"
-        else category = "Medium"
+        if(cutPoints[gender]["minimum"] >= score) category = "Minimum"
+        else if(cutPoints[gender]["low"] >= score && cutPoints[gender]["minimum"] < score) category = "Low"
+        else if(cutPoints[gender]["medium"] >= score && cutPoints[gender]["low"] < score) category = "Medium"
+        else category = "High"
 
+        d3.select("#scoreText .patternResults .gender").text(gender);
         d3.select("#scoreText .riskScore").text(score);
         d3.select("#scoreText .category").text(category);
-
+        d3.select("#scoreText .earlyReleaseEligibility .gender").text(gender === "male" ? "he" : "she");
+        d3.select("#scoreText .earlyReleaseEligibility .eligibility").text((category === "Minimum" || category === "Low") ? "eligible" : "ineligible");
 
     }else{
 
