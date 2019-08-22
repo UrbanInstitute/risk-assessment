@@ -80,12 +80,17 @@ body{
 	margin-bottom: 5px;
 }
 .qNum{
-    display: inline-block;
-    font-weight: bold;
+    /*display: inline-block;*/
+    /*font-weight: bold;*/
+    font-size: 14px;
+    color: #1696d2;
+    text-transform: uppercase;
 }
 .prompt{
-	display: inline;
-    margin-left: 5px;
+	/*display: inline;*/
+    /*margin-left: 5px;*/
+    font-weight: bold;
+    padding: 7px 0;
 }
 .errorMark{
 	display: inline;
@@ -94,8 +99,7 @@ body{
     font-size: 19px;
 }
 .option{
-	margin-bottom: 5px;
-	margin-left: 15px;
+    margin: 14px 0 14px 15px;
 	cursor: pointer;
 }
 .checkbox{
@@ -137,6 +141,10 @@ body{
 	background: #353535;
 }
 #scoreText{
-	margin-bottom: 200px;
-    font-size: 40px;
+	/*margin-bottom: 200px;*/
+    /*font-size: 40px;*/
+    width: 226px;
+    padding: 20px;
+    background-color: #f7f7f7;
+
 }
