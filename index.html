@@ -142,7 +142,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <p>Some text here</p>
             </div>
 
-            <section class = "quizBody">
+            <section class = "quizBody hidden">
                 <div id = "scoreText">
                     <div class="patternResults">
                         <div class="title">Pattern Results</div>
@@ -226,7 +226,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
                 $(window).scroll(function() {
                     // console.log($(window).scrollTop() - toolDropdownSelectorTop, $(".main")[0].getBoundingClientRect().bottom);
-
+                    console.log(quizBodyTop);
                     if($(window).scrollTop() - quizBodyTop >= -50) {
                         // $('#scoreText').addClass("sticky");
                         // if main div is at the top, unstick score box so it scrolls away instead

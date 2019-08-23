@@ -34,7 +34,7 @@ function initControls(questions){
 
             showScore()
 
-
+            d3.select(".quizBody").classed("hidden", false);
         })
 
     // d3.select("#calculate")
