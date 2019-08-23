@@ -28,7 +28,7 @@ p {
     font-size: 20px;
     text-align: center;
     margin-top: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 70px;
     font-weight: lighter;
 }
 
@@ -228,7 +228,40 @@ section.quizBody {
 }
 
 
+/*********** TABLE STYLES **********************/
+.scoreCutoffsTable {
+    width: 100%;
+    border-collapse: collapse;
+}
 
+tr {
+    height: 47px;
+}
+
+thead {
+    font-weight: bold;
+    background-color: #1696d2;
+    color: #fff;
+}
+
+tbody {
+    font-size: 14px;
+}
+
+tbody tr {
+    border-bottom: 1px solid #d2d2d2;
+}
+
+td {
+    padding-left: 10px;
+    width: 33%;
+}
+
+thead td {
+    padding-top: 5px;
+}
+
+/***********************************************/
 
 /*********************************************************************************/
 /*****************************      HOME FOOTER      *****************************/
