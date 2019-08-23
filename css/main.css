@@ -280,6 +280,7 @@ tr td:first-child {
 #footerContainer{
     margin-top: 45px;
     border-top: 2px solid #D2D2D2;
+    height: 50px;
 }
 #footerContent{
     width: 700px;
