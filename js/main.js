@@ -37,7 +37,6 @@ function initControls(questions){
 
         })
 
-    pymChild.sendHeight();
     // d3.select("#calculate")
         // .on("click", showScore)
 }
@@ -187,5 +186,4 @@ function numToWord(number) {
     }
 }
 
-var pymChild = new pym.Child({renderCallback: init});
-// init()
+init()

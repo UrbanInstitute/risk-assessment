@@ -1,24 +1,247 @@
 
 <!DOCTYPE html>
+<html>
 <head>
-<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic,900" rel="stylesheet" type="text/css">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <title>Risk Assessment Quiz</title>
 
-<style>
-body{
-  font-family: Lato;
-}
-html, body{
-  border: none;
-  margin: 0;
-}
-</style>
+<!--         <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@urbaninstitute">
+        <meta name="twitter:creator" content="@urbaninstitute">
+        <meta name="twitter:title" content="Pell Grant Reform Simulator">
+        <meta name="twitter:description" content="Simulate the effects of modifications to the Pell program to see how program costs and grant amounts would change and which students would be affected.">
+        <meta name="twitter:image" content="https://apps.urban.org/features/pell-simulator/img/social.jpg">
+        <meta property="og:title" content="Pell Grant Reform Simulator" />
+        <meta property="og:description" content="Simulate the effects of modifications to the Pell program to see how program costs and grant amounts would change and which students would be affected." />
+        <meta property="og:image" content="https://apps.urban.org/features/pell-simulator/img/social.jpg" />
+        <meta property="og:image:type" content="image/jpeg">
+        <meta property="og:url" content="https://urbn.is/pell">
+ -->
+
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic,900" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <!-- <link rel="stylesheet" type="text/css" href="css/responsive.css"> -->
+        <link rel="stylesheet" type="text/css" href="css/urban-header.css">
+
+<!--         <script type="application/ld+json">
+          {
+            "@context": "http://schema.org",
+            "@type": "NewsArticle",
+            "headline": "Pell Grant Reform Simulator",
+            "url": "https://apps.urban.org/features/pell-simulator/",
+            "thumbnailUrl": "https://apps.urban.org/features/pell-simulator/img/social.jpg",
+            "dateCreated": "2019-02-13T05:00:00.000Z",
+            "articleSection": "Interactive Feature",
+            "creator": ["Matthew Chingos","Victoria Rosenboom","Allison Feldman","Benjamin Chartoff","David Hinson","Serena Lei"],
+            "keywords": ["Education and Training"]
+          }
+
+        </script> -->
 </head>
 <body>
-    <div></div>
-    <div id="quiz"></div>
+<!-- Google Tag Manager -->
+<!-- <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MKBD2W"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MKBD2W');</script>
+ --><!-- End Google Tag Manager -->
+<div id = "breakpoint1200"></div>
+<div id = "breakpoint1000"></div>
+<div id = "breakpoint900"></div>
+<div id = "isMobile"></div>
+<div id = "isPhone"></div>
+<div id = "isSmallPhone"></div>
+<div id = "isVerySmallPhone"></div>
 
-<script src="https://pym.nprapps.org/pym.v1.js"></script>
+
+  <!-- START HEADER -->
+    <div id="header-pinned" class="no-touch">
+       <a target="_blank" href="http://www.urban.org" title="Home" rel="home" class="site-logo"></a>
+    <div class="title"><span class="feature-link"><a href="http://www.urban.org/features" class="title-linkback" alt="Urban Institute logo">Features</a></div>
+    <div class="share-icons">
+        <div class="shareThisP">
+            <span onclick="toggle_visibility('shareBox');">
+                    <div class="shareThisB"></div>
+                </span>
+            <div class="shareThisW" id="shareBox">
+
+                <div class="addthis_toolbox addthis_default_style  "addthis:title="" addthis:url="">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//urbn.is/pell" target="_blank" class="addthis_button_facebook at300b" title="Facebook" onclick="toggle_visibility('shareBox');"><span class="at4-icon aticon-facebook" style="background-color: rgb(48, 88, 145);"><span class="at_a11y">Share on facebook</span></span></a>
+
+                    <a href="https://twitter.com/intent/tweet?text=.%40urbaninstitute%20tool%20lets%20users%20simulate%20the%20effects%20of%20modifications%20to%20the%20Pell%20program%20to%20see%20how%20program%20costs%20and%20grant%20amounts%20would%20change%20and%20which%20students%20would%20be%20affected.%20https%3A%2F%2Furbn.is%2Fpell" target="_blank" class="addthis_button_twitter at300b" title="Tweet" onclick="toggle_visibility('shareBox');"><span class="at4-icon aticon-twitter" style="background-color: rgb(44, 168, 210);"><span class="at_a11y">Share on twitter</span></span></a>
+
+                    <a href="mailto:%20?Subject=New tool from the Urban Institute &amp;Body=Hi! I thought you'd be interested in this new tool from the Urban Institute: &ldquo;Pell Grant Reform Simulator&rdquo; https://urbn.is/pell" target="_blank" title="Email" onclick="toggle_visibility('shareBox');"><span class="at4-icon aticon-email addthis_button_email" ><span class="at_a11y">Share on email</span></span></a>
+                    <div class="atclear"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+  <!-- END HEADER -->
+
+    <h1>Prisoner Assessment Tool Targeting Estimated Risk and Needs (PATTERN) Interactive Tool</h1>
+    <div class="datePublished">August XX, 2019</div>
+
+    <div class="main">
+        <p class="introText"></p>
+
+        <div id="quiz">
+            <div class="selectSexButtons">
+                <div class="instruction">Choose One:</div>
+                <div class = "option">
+                    <div class="selectSex checkbox male"></div>
+                    <div class="label">Male</div>
+                </div>
+                <div class = "option">
+                    <div class="selectSex checkbox female"></div>
+                    <div class="label">Female</div>
+                </div>
+                <p>Some text here</p>
+            </div>
+
+            <section class = "quizBody">
+                <div id = "scoreText">
+                    <div class="patternResults">
+                        <div class="title">Pattern Results</div>
+                        <div>A <span class="gender"></span> in federal prison with the selected characteristics would receive the following results based on the PATTERN risk assessment tool:</div>
+                    </div>
+
+                    <div class="overallRiskScore">
+                        <div class="label">Overall risk score:</div>
+                        <div class="riskScore"></div>
+                    </div>
+
+                    <div class="riskCategory">
+                        <div class="label">Risk category:</div>
+                        <div class="category"></div>
+                    </div>
+
+                    <div class="earlyReleaseEligibility">Based on these results, <span class="gender"></span> would be <span class="eligibility"></span> for early release.</div>
+                </div>
+
+                <div id = "questions"></div>
+                <!-- <div id = "calculate" class = "disabled">Get score</div> -->
+            </section>
+        </div>
+    </div>
+
+  <!-- START FOOTER -->
+  <!-- <div id = "footerContainer">
+    <div id = "footerContent">
+
+      <div class = "footerHeader" id = "topFooterHeader">About the data</div>
+      <p class = "footerAbout">This simulator tool is based on analyses of the 2015&ndash;16 National Postsecondary Student Aid Study, a nationally representative dataset collected by the US Department of Education. We then simulated 2018&ndash;19 Pell awards as our baseline as a better point of comparison for changes to current policy.</p>
+      <p class = "footerAbout">More details on the data and methodology, including sample selection, adjustment of grants for enrollment intensity and cost of attendance, and calculation of budget estimates, can be found in the <a href = "pell_simulator_appendix.pdf" target = "_blank">technical appendix.</a></p>
+
+<a href = "data/download/pell_simulator_download.xlsx" class = "footerButtonLink"><div class = "button">Download data</div></a>
+<a href = "pell_simulator_appendix.pdf" target = "_blank" class = "footerButtonLink"><div class = "button bottom">Technical appendix</div></a>
+
+      <div class = "footerHeader">PROJECT CREDITS</div>
+      <p class = "footerCredits">This feature was funded by the <a href = "https://www.gatesfoundation.org/" target = "_blank">Bill & Melinda Gates Foundation</a>. We are grateful to them and to all our funders, who make it possible for Urban to advance its mission. The views expressed are those of the authors and should not be attributed to the Urban Institute, its trustees, or its funders. Funders do not determine research findings or the insights and recommendations of our experts. More information on our funding principles is available <a href = "https://www.urban.org/support/funding-principles" target = "_blank">here</a>. Read our terms of service <a href = "https://www.urban.org/terms-service" target = "_blank">here</a>.</p>
+
+
+      <div class = "creditsHeader">RESEARCH</div>
+      <div class = "creditsNames"><a href = "https://www.urban.org/author/matthew-chingos" target = "_blank">Matthew Chingos</a> and <a href = "https://www.urban.org/author/victoria-rosenboom" target = "_blank">Victoria Rosenboom</a></div>
+
+      <div class = "creditsHeader">DESIGN</div>
+      <div class = "creditsNames">Allison Feldman</div>
+
+      <div class = "creditsHeader">DEVELOPMENT</div>
+      <div class = "creditsNames">Ben Chartoff</div>
+
+      <div class = "creditsHeader">EDITING</div>
+      <div class = "creditsNames">David Hinson</div>
+
+      <div class = "creditsHeader">WRITING</div>
+      <div class = "creditsNames">Serena Lei</div>
+
+      <div id = "copyright"><a href = "https://github.com/UrbanInstitute/pell-simulator" target = "_blank">View this project on GitHub</a>.</div>
+
+    </div>
+  </div> -->
+  <!-- END FOOTER -->
+
+
+
+  </div>
+  <!-- END MAIN CONTENT -->
+
+
+
+<script src = "js/vendor/jquery.2.1.4.min.js"></script>
+<script src = "js/vendor/es6-promise.min.js"></script>
+<script src = "js/vendor/es6-promise.auto.min.js"></script>
+<script src = "js/vendor/d3.v5.min.js"></script>
+<script src = "js/header.js"></script>
+<script src = "js/main.js"></script>
+
 <script>
-    var pymParent = new pym.Parent("quiz", "child.html", {});
+    $(window).on("load", function() {  // perform calculations only after DOM is fully rendered
+        if ($(window).width() >= 768) {
+            $(function() {
+                var quizBodyTop = $(".quizBody")[0].getBoundingClientRect().top + $(window).scrollTop(); //get the offset top of the element
+
+                $(window).scroll(function() {
+                    // console.log($(window).scrollTop() - toolDropdownSelectorTop, $(".main")[0].getBoundingClientRect().bottom);
+
+                    if($(window).scrollTop() - quizBodyTop >= -50) {
+                        // $('#scoreText').addClass("sticky");
+                        // if main div is at the top, unstick score box so it scrolls away instead
+                        // of remaining fixed over the footer
+                        if($(".main")[0].getBoundingClientRect().bottom < 368) {
+                            $("#scoreText").removeClass("sticky");
+                            $("#scoreText").addClass("unstick");
+                        }
+                        // if score box is at the top but bottom of main div isn't, make it sticky
+                        else {
+                            $("#scoreText").addClass("sticky");
+                        }
+                    }
+                    else {
+                        $('#scoreText').removeClass("sticky");
+                    }
+                });
+            });
+        }
+    })
 </script>
+<!--   <script>
+  (function (i, s, o, g, r, a, m) {
+  i['GoogleAnalyticsObject'] = r;
+  i[r] = i[r] || function () { 
+  (i[r].q = i[r].q || []).push(arguments)
+  }, i[r].l = 1 * new Date();
+  a = s.createElement(o),  m = s.getElementsByTagName(o)[0];
+  a.async = 1;
+  a.src = g;
+  m.parentNode.insertBefore(a, m) 
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga'); 
+  ga('create', 'UA-57529944-1', 'auto'); 
+  ga('send', 'pageview');
+  </script> -->
+
+  <!-- START Parse.ly Include: Standard -->
+<!--   <div id="parsely-root" style="display: none">
+  <span id="parsely-cfg" data-parsely-site="urban.org"></span>
+  </div>
+  <script>
+  (function(s, p, d) {
+  var h=d.location.protocol, i=p+"-"+s,
+  e=d.getElementById(i), r=d.getElementById(p+"-root"),
+  u=h==="https:"?"d1z2jf7jlzjs58.cloudfront.net"
+  :"static."+p+".com";
+  if (e) return;
+  e = d.createElement(s); e.id = i; e.async = true;
+  e.src = h+"//"+u+"/p.js"; r.appendChild(e);
+  })("script", "parsely", document);
+  </script> -->
+  <!-- END Parse.ly Include: Standard -->
 </body>
+</html>

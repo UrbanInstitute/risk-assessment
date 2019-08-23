@@ -4,8 +4,37 @@ body{
     font-size: 16px;
 }
 
+.main {
+    max-width: 632px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin: 150px auto 0;
+    font-weight: bold;
+    font-size: 40px;
+    max-width: 960px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 23px;
+    color: #353535;
+}
+
+.datePublished {
+    font-style: italic;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-weight: lighter;
+}
+
 .selectSexButtons {
     padding-bottom: 40px;
+    padding-top: 50px;
 }
 
 .selectSexButtons div {
@@ -60,14 +89,14 @@ body{
 section.quizBody {
     position: relative;
     /*width: 632px;*/
-    padding-left: 280px;
+    /*padding-left: 280px;*/
 }
 
 #questions{
-
+    padding-left: 260px;
 }
 .question{
-	margin-bottom: 30px;
+	margin-bottom: 50px;
 }
 .question.hide{
 	display: none;
@@ -105,9 +134,17 @@ section.quizBody {
     font-size: 19px;
 }
 .option{
-    margin: 14px 0 14px 15px;
+    margin: 20px 0 20px 15px;
 	cursor: pointer;
+    display: block;
+    overflow: auto;
 }
+
+.selectSexButtons .option {
+    margin: 0 0 0 15px;
+    vertical-align: bottom;
+}
+
 .checkbox{
 	width: 16px;
     height: 16px;
@@ -116,14 +153,18 @@ section.quizBody {
     border: 1px solid #c4c4c4;
     border-radius: 16px;
     vertical-align: text-bottom;
+    float: left;
+    margin-top: 1px;
 }
 .checkbox.active{
     background: #1696d2;
     border: 1px solid #1696d2;
 }
 .optVal{
-	display: inline;
+	display: inline-block;
     margin-left: 10px;
+    float: left;
+    max-width: 320px;
 }
 
 #calculate{
@@ -152,12 +193,18 @@ section.quizBody {
     width: 226px;
     padding: 30px;
     background-color: #f7f7f7;
-    position: fixed;
-    top: 150px;
+    position: absolute;
+    /*position: sticky;*/
+    top: 0;
     left: 0;
     box-sizing: border-box;
 }
 
+#scoreText.sticky {
+    position: fixed;
+    top: 50px;
+    left: calc(50% - 316px);
+}
 #scoreText .title {
     color: #1696d2;
     font-size: 14px;
@@ -178,4 +225,57 @@ section.quizBody {
 #scoreText .category {
     color: #1696d2;
     font-weight: bold;
+}
+
+
+
+
+/*********************************************************************************/
+/*****************************      HOME FOOTER      *****************************/
+/*********************************************************************************/
+
+#footerContainer{
+    margin-top: 45px;
+    border-top: 2px solid #D2D2D2;
+}
+#footerContent{
+    width: 700px;
+    margin: 0 auto;
+}
+.footerHeader{
+    margin-top: 50px;
+    margin-bottom: 8px;
+    font-size: 34px;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: inline-block;
+}
+#topFooterHeader{
+    padding-top: 44px;
+}
+.footerAbout, .footerCredits, .footerSpecialCredit{
+    font-size: 16px;
+    line-height: 26px;
+}
+.footerCredits, .footerSpecialCredit{
+    font-size: 14px;
+    font-style: italic;
+    line-height: 22px;
+}
+#bottomFooterCredits{
+    margin-bottom: 45px;
+}
+.creditsHeader{
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.creditsNames{
+    margin-bottom: 30px;
+    margin-top: 5px;
+    font-size: 16px;
+}
+#copyright{
+    margin-bottom: 100px;
+    display: inline-block;
 }
