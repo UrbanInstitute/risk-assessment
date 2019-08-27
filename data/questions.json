@@ -22,8 +22,165 @@
 				"male": 12,
 				"female": 15
 			}
-		]
+		],
+        "type": "static"
 	},
+    {
+        "question": "Instant ofense violent",
+        "options": [
+            {
+                "option": "No",
+                "male": 0,
+                "female": false
+            },
+            {
+                "option": "Yes",
+                "male": 4,
+                "female": false
+            }
+        ],
+        "type": "static"
+    },
+    {
+        "question": "Sex ofender (Walsh)",
+        "options": [
+            {
+                "option": "No",
+                "male": 0,
+                "female": false
+            },
+            {
+                "option": "Yes",
+                "male": 1,
+                "female": false
+            }
+        ],
+        "type": "static"
+    },
+    {
+        "question": "BRAVO Initial: Criminal History Score",
+        "options": [
+            {
+                "option": "0-1 points",
+                "male": 0,
+                "female": 0
+            },
+            {
+                "option": "2-3 points",
+                "male": 6,
+                "female": 6
+            },
+            {
+                "option": "4-6 points",
+                "male": 12,
+                "female": 12
+            },
+            {
+                "option": "7-9 points",
+                "male": 18,
+                "female": 18
+            },
+            {
+                "option": "10-12 points",
+                "male": 24,
+                "female": 24
+            },
+            {
+                "option": "13+ points",
+                "male": 30,
+                "female": 30
+            }
+        ],
+        "type": "static"
+    },
+    {
+        "question": "BRAVO Initial: History of Violence",
+        "options": [
+            {
+                "option": "None",
+                "male": 0,
+                "female": 0
+            },
+            {
+                "option": ">10 years minor",
+                "male": 1,
+                "female": 1
+            },
+            {
+                "option": ">15 years serious",
+                "male": 2,
+                "female": 2
+            },
+            {
+                "option": "5-10 years minor",
+                "male": 3,
+                "female": 3
+            },
+            {
+                "option": "10-15 years serious",
+                "male": 4,
+                "female": 4
+            },
+            {
+                "option": "<5 years minor",
+                "male": 5,
+                "female": 5
+            },
+            {
+                "option": "5-10 years serious",
+                "male": 6,
+                "female": 6
+            },
+            {
+                "option": "<5 years serious",
+                "male": 7,
+                "female": 7
+            }
+        ],
+        "type": "static"
+    },
+    {
+        "question": "BRAVO Initial: History of Escapes",
+        "options": [
+            {
+                "option": "None",
+                "male": 0,
+                "female": 0
+            },
+            {
+                "option": ">10 years minor",
+                "male": 2,
+                "female": 2
+            },
+            {
+                "option": "5-10 years minor",
+                "male": 4,
+                "female": 4
+            },
+            {
+                "option": "<5 years minor or any serious",
+                "male": 6,
+                "female": 6
+            }
+        ],
+        "type": "static"
+    },
+    {
+        "question": "BRAVO Initial: Voluntary Surrender",
+        "options": [
+            {
+                "option": "Yes",
+                "male": -12,
+                "female": -9
+            },
+            {
+                "option": "No",
+                "male": 0,
+                "female": 0
+            }
+        ],
+        "type": "static"
+    },
 	{
 		"question": "Age at time of assessment",
 		"options": [
@@ -57,7 +214,8 @@
 				"male": 30,
 				"female": 15
 			}
-		]
+		],
+        "type": "dynamic"
 	},
 	{
 		"question": "Infraction convictions (any)",
@@ -82,7 +240,8 @@
 				"male": 9,
 				"female": 6
 			}
-		]
+		],
+        "type": "dynamic"
 	},
 	{
 		"question": "Infraction convictions (serious and violent)",
@@ -107,7 +266,8 @@
 				"male": 6,
 				"female": 6
 			}
-		]
+		],
+        "type": "dynamic"
 	},
 	{
 		"question": "Number of programs completed (any)",
@@ -137,7 +297,8 @@
 				"male": -12,
 				"female": -8
 			}
-		]
+		],
+        "type": "dynamic"
 	},
 	{
 		"question": "Number of technical or vocational courses",
@@ -157,22 +318,8 @@
 				"male": 0,
 				"female": 0
 			}
-		]
-	},
-	{
-		"question": "Federal industry employment (UNICOR)",
-		"options": [
-			{
-				"option": "Yes",
-				"male": false,
-				"female": -1
-			},
-			{
-				"option": "No",
-				"male": false,
-				"female": 0
-			}
-		]
+		],
+        "type": "dynamic"
 	},
 	{
 		"question": "Drug treatment while incarcerated",
@@ -197,7 +344,8 @@
 				"male": 0,
 				"female": 0
 			}
-		]
+		],
+        "type": "dynamic"
 	},
 	{
 		"question": "Drug education while incarcerated",
@@ -212,8 +360,25 @@
 				"male": 4,
 				"female": false
 			}
-		]
+		],
+        "type": "dynamic"
 	},
+    {
+        "question": "Federal industry employment (UNICOR)",
+        "options": [
+            {
+                "option": "Yes",
+                "male": false,
+                "female": -1
+            },
+            {
+                "option": "No",
+                "male": false,
+                "female": 0
+            }
+        ],
+        "type": ""
+    },
 	{
 		"question": "Non-compliance with fnancial responsibility",
 		"options": [
@@ -227,157 +392,8 @@
 				"male": false,
 				"female": 3
 			}
-		]
-	},
-	{
-		"question": "Instant ofense violent",
-		"options": [
-			{
-				"option": "No",
-				"male": 0,
-				"female": false
-			},
-			{
-				"option": "Yes",
-				"male": 4,
-				"female": false
-			}
-		]
-	},
-	{
-		"question": "Sex ofender (Walsh)",
-		"options": [
-			{
-				"option": "No",
-				"male": 0,
-				"female": false
-			},
-			{
-				"option": "Yes",
-				"male": 1,
-				"female": false
-			}
-		]
-	},
-	{
-		"question": "BRAVO Initial: Criminal History Score",
-		"options": [
-			{
-				"option": "0-1 points",
-				"male": 0,
-				"female": 0
-			},
-			{
-				"option": "2-3 points",
-				"male": 6,
-				"female": 6
-			},
-			{
-				"option": "4-6 points",
-				"male": 12,
-				"female": 12
-			},
-			{
-				"option": "7-9 points",
-				"male": 18,
-				"female": 18
-			},
-			{
-				"option": "10-12 points",
-				"male": 24,
-				"female": 24
-			},
-			{
-				"option": "13+ points",
-				"male": 30,
-				"female": 30
-			}
-		]
-	},
-	{
-		"question": "BRAVO Initial: History of Violence",
-		"options": [
-			{
-				"option": "None",
-				"male": 0,
-				"female": 0
-			},
-			{
-				"option": ">10 years minor",
-				"male": 1,
-				"female": 1
-			},
-			{
-				"option": ">15 years serious",
-				"male": 2,
-				"female": 2
-			},
-			{
-				"option": "5-10 years minor",
-				"male": 3,
-				"female": 3
-			},
-			{
-				"option": "10-15 years serious",
-				"male": 4,
-				"female": 4
-			},
-			{
-				"option": "<5 years minor",
-				"male": 5,
-				"female": 5
-			},
-			{
-				"option": "5-10 years serious",
-				"male": 6,
-				"female": 6
-			},
-			{
-				"option": "<5 years serious",
-				"male": 7,
-				"female": 7
-			}
-		]
-	},
-	{
-		"question": "BRAVO Initial: History of Escapes",
-		"options": [
-			{
-				"option": "None",
-				"male": 0,
-				"female": 0
-			},
-			{
-				"option": ">10 years minor",
-				"male": 2,
-				"female": 2
-			},
-			{
-				"option": "5-10 years minor",
-				"male": 4,
-				"female": 4
-			},
-			{
-				"option": "<5 years minor or any serious",
-				"male": 6,
-				"female": 6
-			}
-		]
-	},
-	{
-		"question": "BRAVO Initial: Voluntary Surrender",
-		"options": [
-			{
-				"option": "Yes",
-				"male": -12,
-				"female": -9
-			},
-			{
-				"option": "No",
-				"male": 0,
-				"female": 0
-			}
-		]
+		],
+        "type": ""
 	},
 	{
 		"question": "BRAVO Initial: Education Score",

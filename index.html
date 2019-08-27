@@ -162,7 +162,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <div class="earlyReleaseEligibility">Based on these results, <span class="gender"></span> would be <span class="eligibility"></span> for early release.</div>
                 </div>
 
-                <div id = "questions"></div>
+                <h3 class="questionCategory">Static</h3>
+                <div id = "staticQuestions" class="questions"></div>
+
+                <h3 class="questionCategory">Dynamic</h3>
+                <div id = "dynamicQuestions" class="questions"></div>
                 <!-- <div id = "calculate" class = "disabled">Get score</div> -->
             </section>
         </div>
@@ -226,7 +230,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
                 $(window).scroll(function() {
                     // console.log($(window).scrollTop() - toolDropdownSelectorTop, $(".main")[0].getBoundingClientRect().bottom);
-                    console.log(quizBodyTop);
+                    // console.log(quizBodyTop);
                     if($(window).scrollTop() - quizBodyTop >= -50) {
                         // $('#scoreText').addClass("sticky");
                         // if main div is at the top, unstick score box so it scrolls away instead

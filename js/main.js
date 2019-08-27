@@ -84,15 +84,28 @@ function showScore(){
 }
 
 function buildQuestions(questions){
-    var question = d3.select("#questions")
+    var staticQuestions = d3.select("#staticQuestions")
         .selectAll(".question")
-        .data(questions)
+        .data(questions.filter(function(d) { return d.type === "static"; }))
         .enter()
         .append("div")
-        .attr("class", "question disabled")
+        .attr("class", "question disabled");
         // .attr("class", "question")
 
-    var prompt = question.append("div")
+    populateQuestions(staticQuestions);
+
+    var dynamicQuestions = d3.select("#dynamicQuestions")
+        .selectAll(".question")
+        .data(questions.filter(function(d) { return d.type === "dynamic"; }))
+        .enter()
+        .append("div")
+        .attr("class", "question disabled");
+
+    populateQuestions(dynamicQuestions);
+}
+
+function populateQuestions(questionDiv) {
+    var prompt = questionDiv.append("div")
         .attr("class", "promptRow")
         .attr("id", function(d,i){
             return "p" + i;
@@ -104,15 +117,13 @@ function buildQuestions(questions){
 
     prompt.append("div")
         .attr("class", "prompt")
-        .text(function(d){
-            return d.question
-        })
+        .text(function(d){ return d.question; })
 
     // prompt.append("div")
     //     .attr("class", "errorMark")
     //     .text("*")
 
-    var option = question.append("div")
+    var option = questionDiv.append("div")
         .selectAll(".option")
         .data(function(d){ return d.options })
         .enter()
@@ -131,9 +142,7 @@ function buildQuestions(questions){
     option.append("div")
         .attr("class", "checkbox")
         //to be removed
-        .classed("active", function(d,i){
-            return i == 0
-        })
+        .classed("active", function(d,i){ return i == 0; })
 
     option.append("div")
         .attr("class", "optVal")

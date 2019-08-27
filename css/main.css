@@ -103,7 +103,7 @@ h3.questionCategory {
     text-transform: uppercase;
 }
 
-#questions{
+.questions{
     padding-left: 260px;
 }
 .question{
