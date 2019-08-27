@@ -98,6 +98,11 @@ section.quizBody.hidden {
     overflow-y: hidden;
 }
 
+h3.questionCategory {
+    padding-left: 260px;
+    text-transform: uppercase;
+}
+
 #questions{
     padding-left: 260px;
 }
@@ -144,6 +149,11 @@ section.quizBody.hidden {
 	cursor: pointer;
     display: block;
     overflow: auto;
+}
+
+.pointsLabel {
+    font-style: italic;
+    color: #9d9d9d;
 }
 
 .selectSexButtons .option {

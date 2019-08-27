@@ -32,6 +32,9 @@ function initControls(questions){
                     }
                 })
 
+            var answerOptions = d3.selectAll(".option");
+            answerOptions.select(".pointVal").text(function(d) { return d[gender]; });
+
             showScore()
 
             d3.select(".quizBody").classed("hidden", false);
@@ -134,7 +137,7 @@ function buildQuestions(questions){
 
     option.append("div")
         .attr("class", "optVal")
-        .text(function(d){ return d.option })
+        .html(function(d){ return d.option + " <span class='pointsLabel'>(<span class='pointVal'>" + d.male + "</span> points)</span>"; })
 }
 
 function numToWord(number) {
