@@ -6,14 +6,23 @@ function init() {
 }
 
 function initControls(questions){
-    d3.selectAll(".selectSex.checkbox")
+    d3.selectAll(".selectSexButtons .option")
         .on("click", function(){
-            d3.selectAll(".selectSex.checkbox").classed("active", false);
+            d3.selectAll(".selectSexButtons .option").classed("active", false);
             d3.select(this).classed("active", true);
 
             d3.select("#calculate").classed("disabled", false)
 
             var gender = (d3.select(this).classed("male")) ? "male" : "female";
+
+            if(gender === "male") {
+                d3.select(".selectSex.checkbox.male").classed("active", true);
+                d3.select(".selectSex.checkbox.female").classed("active", false);
+            }
+            else {
+                d3.select(".selectSex.checkbox.male").classed("active", false);
+                d3.select(".selectSex.checkbox.female").classed("active", true);
+            }
 
             var question = d3.selectAll(".question")
 
@@ -56,7 +65,7 @@ function showScore(){
 
     if(d3.selectAll(".question.error").nodes().length == 0){
         var score = 0,
-            gender = (d3.select(".selectSex.checkbox.active").classed("male")) ? "male" : "female";
+            gender = (d3.select(".selectSexButtons .option.active").classed("male")) ? "male" : "female";
 
         qs.each(function(){
             // console.log(d)

@@ -34,7 +34,7 @@ p {
 
 .selectSexButtons {
     padding-bottom: 40px;
-    padding-top: 50px;
+    padding-top: 15px;
 }
 
 .selectSexButtons div {
@@ -248,6 +248,7 @@ h3.questionCategory {
 .scoreCutoffsTable {
     width: 100%;
     border-collapse: collapse;
+    margin-bottom: 60px;
 }
 
 tr {
@@ -332,4 +333,11 @@ tr td:first-child {
 #copyright{
     margin-bottom: 100px;
     display: inline-block;
+}
+
+.footnote {
+    font-size: 11px;
+    line-height: 14px;
+    width: 632px;
+    margin: 20px auto;
 }
