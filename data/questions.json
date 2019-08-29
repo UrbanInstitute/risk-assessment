@@ -181,6 +181,27 @@
         ],
         "type": "static"
     },
+    {
+        "question": "BRAVO Initial: Education Score",
+        "options": [
+            {
+                "option": "HS degree or GED - Verifed",
+                "male": false,
+                "female": -2
+            },
+            {
+                "option": "Enrolled and progressing in GED",
+                "male": false,
+                "female": -1
+            },
+            {
+                "option": "No verifed degree and not participating in GED program",
+                "male": false,
+                "female": 0
+            }
+        ],
+        "type": "static"
+    },
 	{
 		"question": "Age at time of assessment",
 		"options": [
@@ -321,6 +342,22 @@
 		],
         "type": "dynamic"
 	},
+    {
+        "question": "Federal industry employment (UNICOR)",
+        "options": [
+            {
+                "option": "Yes",
+                "male": false,
+                "female": -1
+            },
+            {
+                "option": "No",
+                "male": false,
+                "female": 0
+            }
+        ],
+        "type": "dynamic"
+    },
 	{
 		"question": "Drug treatment while incarcerated",
 		"options": [
@@ -363,22 +400,6 @@
 		],
         "type": "dynamic"
 	},
-    {
-        "question": "Federal industry employment (UNICOR)",
-        "options": [
-            {
-                "option": "Yes",
-                "male": false,
-                "female": -1
-            },
-            {
-                "option": "No",
-                "male": false,
-                "female": 0
-            }
-        ],
-        "type": ""
-    },
 	{
 		"question": "Non-compliance with fnancial responsibility",
 		"options": [
@@ -393,26 +414,6 @@
 				"female": 3
 			}
 		],
-        "type": ""
-	},
-	{
-		"question": "BRAVO Initial: Education Score",
-		"options": [
-			{
-				"option": "HS degree or GED - Verifed",
-				"male": false,
-				"female": -2
-			},
-			{
-				"option": "Enrolled and progressing in GED",
-				"male": false,
-				"female": -1
-			},
-			{
-				"option": "No verifed degree and not participating in GED program",
-				"male": false,
-				"female": 0
-			}
-		]
+        "type": "dynamic"
 	}
 ]
