@@ -394,7 +394,7 @@
 			},
 			{
 				"option": "Yes",
-				"male": 4,
+				"male": -1,
 				"female": false
 			}
 		],
