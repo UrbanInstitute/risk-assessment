@@ -42,7 +42,10 @@ function initControls(questions){
                 })
 
             var answerOptions = d3.selectAll(".option");
-            answerOptions.select(".pointVal").text(function(d) { return d[gender]; });
+            // answerOptions.select(".pointVal").text(function(d) { return d[gender]; });
+
+            answerOptions.selectAll(".optVal")
+                .html(function(d){ return d.option + " <span class='pointsLabel'>(<span class='pointVal'>" + d[gender] + "</span> " + ((d[gender] === 1 || d[gender] === -1) ? "point" : "points") + ")</span>"; })
 
             showScore()
 
@@ -155,7 +158,7 @@ function populateQuestions(questionDiv) {
 
     option.append("div")
         .attr("class", "optVal")
-        .html(function(d){ return d.option + " <span class='pointsLabel'>(<span class='pointVal'>" + d.male + "</span> points)</span>"; })
+        .html(function(d){ return d.option + " <span class='pointsLabel'>(<span class='pointVal'>" + d.male + "</span> " + ((d.male === 1 || d.male === -1) ? "point" : "points") + ")</span>"; })
 }
 
 function numToWord(number) {
