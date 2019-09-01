@@ -1,5 +1,5 @@
 function init() {
-    d3.json("data/questions.json").then(function(questions){
+    d3.json("data/questions.json", function(error, questions){
         buildQuestions(questions)
         initControls(questions)
     });
