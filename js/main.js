@@ -129,7 +129,7 @@ function populateQuestions(questionDiv) {
 
     prompt.append("div")
         .attr("class", "prompt")
-        .text(function(d){ return d.question; })
+        .html(function(d){ return d.question; })
 
     // prompt.append("div")
     //     .attr("class", "errorMark")

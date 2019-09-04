@@ -322,22 +322,22 @@
         "type": "dynamic"
 	},
 	{
-		"question": "Number of technical or vocational courses",
+		"question": "Number of technical or vocational courses<sup>2</sup>",
 		"options": [
 			{
 				"option": "0",
-				"male": -2,
-				"female": -4
+				"male": 0,
+				"female": 0
 			},
 			{
 				"option": "1",
 				"male": -1,
-				"female": -2
+				"female": -1
 			},
 			{
 				"option": "> 1",
-				"male": 0,
-				"female": 0
+				"male": -2,
+				"female": -2
 			}
 		],
         "type": "dynamic"
