@@ -1,7 +1,68 @@
 body{
 	font-family: Lato;
+    color: #353535;
+    font-size: 16px;
 }
-.button{
+
+.main {
+    max-width: 632px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin: 150px auto 0;
+    font-weight: bold;
+    font-size: 40px;
+    max-width: 960px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 23px;
+    color: #353535;
+}
+
+.datePublished {
+    font-style: italic;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 70px;
+    font-weight: lighter;
+}
+
+.selectSexButtons {
+    padding-bottom: 40px;
+    padding-top: 15px;
+}
+
+.selectSexButtons div {
+    display: inline-block;
+}
+
+.selectSexButtons .option {
+    width: 100px;
+}
+
+.selectSexButtons .instruction {
+    font-size: 20px;
+    color: #1696d2;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 160px;
+}
+
+.selectSexButtons .label {
+    font-size: 18px;
+    padding-left: 10px;
+}
+
+.selectSexButtons p {
+    font-style: italic;
+    color: #9d9d9d;
+}
+/*.button{
     text-transform: uppercase;
     background: #d2d2d2;
     display: inline-block;
@@ -11,15 +72,42 @@ body{
     color: #353535;
     cursor: pointer;
 }
-.button.active, .button:hover{
+
+.button.male,
+.button.female {
+    background: #fff;
+    text-transform: none;
+    padding: 0;
+}*/
+
+/*.button.active, .button:hover{
 	background: #1696d2;
 	color: #fff;
 }
-#questions{
+*/
 
+section.quizBody {
+    position: relative;
+    height: auto;
+    /*padding-left: 280px;*/
+}
+
+section.quizBody.hidden {
+    /*display: none;*/
+    height: 1px;
+    overflow-y: hidden;
+}
+
+h3.questionCategory {
+    padding-left: 260px;
+    text-transform: uppercase;
+}
+
+.questions{
+    padding-left: 260px;
 }
 .question{
-	margin-bottom: 30px;
+	margin-bottom: 50px;
 }
 .question.hide{
 	display: none;
@@ -38,12 +126,17 @@ body{
 	margin-bottom: 5px;
 }
 .qNum{
-    display: inline-block;
-    font-weight: bold;
+    /*display: inline-block;*/
+    /*font-weight: bold;*/
+    font-size: 14px;
+    color: #1696d2;
+    text-transform: uppercase;
 }
 .prompt{
-	display: inline;
-    margin-left: 5px;
+	/*display: inline;*/
+    /*margin-left: 5px;*/
+    font-weight: bold;
+    padding: 7px 0;
 }
 .errorMark{
 	display: inline;
@@ -52,24 +145,42 @@ body{
     font-size: 19px;
 }
 .option{
-	margin-bottom: 5px;
-	margin-left: 15px;
+    margin: 20px 0 20px 15px;
 	cursor: pointer;
+    display: block;
+    overflow: auto;
 }
+
+.pointsLabel {
+    font-style: italic;
+    color: #9d9d9d;
+}
+
+.selectSexButtons .option {
+    margin: 0 0 0 15px;
+    vertical-align: bottom;
+}
+
 .checkbox{
-	width: 10px;
-    height: 10px;
-    background: #d2d2d2;
+	width: 16px;
+    height: 16px;
+    /*background: #d2d2d2;*/
     display: inline-block;
-    border: 1px solid #d2d2d2;
+    border: 1px solid #c4c4c4;
+    border-radius: 16px;
+    vertical-align: text-bottom;
+    float: left;
+    margin-top: 1px;
 }
 .checkbox.active{
     background: #1696d2;
     border: 1px solid #1696d2;
 }
 .optVal{
-	display: inline;
+	display: inline-block;
     margin-left: 10px;
+    float: left;
+    max-width: 320px;
 }
 
 #calculate{
@@ -90,9 +201,143 @@ body{
 	opacity: .4;
 }
 #calculate.active, #calculate:hover{
-	background: #353535; 
+	background: #353535;
 }
+
+
 #scoreText{
-	margin-bottom: 200px;
-    font-size: 40px;
+    width: 226px;
+    padding: 30px;
+    background-color: #f7f7f7;
+    position: absolute;
+    /*position: sticky;*/
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+}
+
+#scoreText.sticky {
+    position: fixed;
+    top: 50px;
+    left: calc(50% - 316px);
+}
+#scoreText .title {
+    color: #1696d2;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+#scoreText .patternResults,
+#scoreText .riskCategory {
+    margin-bottom: 30px;
+}
+
+#scoreText .label {
+    font-weight: bold;
+    margin: 3px 0;
+}
+
+#scoreText .riskScore,
+#scoreText .category {
+    color: #1696d2;
+    font-weight: bold;
+}
+
+
+/*********** TABLE STYLES **********************/
+.scoreCutoffsTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 60px;
+}
+
+tr {
+    height: 47px;
+}
+
+thead {
+    font-weight: bold;
+    background-color: #1696d2;
+    color: #fff;
+}
+
+tbody {
+    font-size: 14px;
+}
+
+tbody tr {
+    border-bottom: 1px solid #d2d2d2;
+}
+
+td {
+    padding-left: 10px;
+    width: 33%;
+}
+
+thead td {
+    padding-top: 5px;
+}
+
+tr td:first-child {
+    font-weight: bold;
+}
+
+/***********************************************/
+
+/*********************************************************************************/
+/*****************************      HOME FOOTER      *****************************/
+/*********************************************************************************/
+
+#footerContainer{
+    margin-top: 45px;
+    border-top: 2px solid #D2D2D2;
+    height: 50px;
+}
+#footerContent{
+    width: 700px;
+    margin: 0 auto;
+}
+.footerHeader{
+    margin-top: 50px;
+    margin-bottom: 8px;
+    font-size: 34px;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: inline-block;
+}
+#topFooterHeader{
+    padding-top: 44px;
+}
+.footerAbout, .footerCredits, .footerSpecialCredit{
+    font-size: 16px;
+    line-height: 26px;
+}
+.footerCredits, .footerSpecialCredit{
+    font-size: 14px;
+    font-style: italic;
+    line-height: 22px;
+}
+#bottomFooterCredits{
+    margin-bottom: 45px;
+}
+.creditsHeader{
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.creditsNames{
+    margin-bottom: 30px;
+    margin-top: 5px;
+    font-size: 16px;
+}
+#copyright{
+    margin-bottom: 100px;
+    display: inline-block;
+}
+
+.footnote {
+    font-size: 11px;
+    line-height: 14px;
+    width: 632px;
+    margin: 20px auto;
 }
