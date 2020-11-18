@@ -248,6 +248,58 @@
 		],
         "type": "dynamic"
 	},
+        {
+        "question": "Infraction-free time (any)",
+        "options": [
+            {
+                "option": "No infractions/>12 months",
+                "male": 0,
+                "female": 0
+            },
+            {
+                "option": "7-12 months",
+                "male": 2,
+                "female": 2
+            },
+            {
+                "option": "3-6 months",
+                "male": 4,
+                "female": 4
+            },
+            {
+                "option": "<3 months",
+                "male": 6,
+                "female": 6
+            }
+        ],
+        "type": "dynamic"
+    },
+        {
+        "question": "Infraction-free time (serious and violent)",
+        "options": [
+            {
+                "option": "No infractions/>12 months",
+                "male": 0,
+                "female": 0
+            },
+            {
+                "option": "7-12 months",
+                "male": 1,
+                "female": 1
+            },
+            {
+                "option": "3-6 months",
+                "male": 2,
+                "female": 2
+            },
+            {
+                "option": "<3 months",
+                "male": 3,
+                "female": 3
+            }
+        ],
+        "type": "dynamic"
+    },
 	{
 		"question": "Number of programs completed (any)",
 		"options": [
@@ -279,6 +331,27 @@
 		],
         "type": "dynamic"
 	},
+    {
+        "question": "Work programming",
+        "options": [
+            {
+                "option": "0",
+                "male": 0,
+                "female": 0
+            },
+            {
+                "option": "1",
+                "male": -1,
+                "female": -1
+            },
+            {
+                "option": ">=2",
+                "male": -2,
+                "female": -2
+            }
+        ],
+        "type": "dynamic"
+    },
     {
 		"question": "Drug treatment while incarcerated",
 		"options": [
