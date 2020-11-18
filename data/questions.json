@@ -1,30 +1,4 @@
 [
-	{
-		"question": "Age at first conviction",
-		"options": [
-			{
-				"option": "> 35",
-				"male": 0,
-				"female": 0
-			},
-			{
-				"option": "25–34",
-				"male": 4,
-				"female": 5
-			},
-			{
-				"option": "18–24 ",
-				"male": 8,
-				"female": 10
-			},
-			{
-				"option": "< 18",
-				"male": 12,
-				"female": 15
-			}
-		],
-        "type": "static"
-	},
     {
         "question": "Current offense was violent",
         "options": [
@@ -161,22 +135,6 @@
                 "option": "< 5 years minor or any serious",
                 "male": 6,
                 "female": 6
-            }
-        ],
-        "type": "static"
-    },
-    {
-        "question": "Voluntary surrender",
-        "options": [
-            {
-                "option": "Yes",
-                "male": -12,
-                "female": -9
-            },
-            {
-                "option": "No",
-                "male": 0,
-                "female": 0
             }
         ],
         "type": "static"
@@ -321,44 +279,7 @@
 		],
         "type": "dynamic"
 	},
-	{
-		"question": "Number of technical or vocational courses<sup>2</sup>",
-		"options": [
-			{
-				"option": "0",
-				"male": 0,
-				"female": 0
-			},
-			{
-				"option": "1",
-				"male": -1,
-				"female": -1
-			},
-			{
-				"option": "> 1",
-				"male": -2,
-				"female": -2
-			}
-		],
-        "type": "dynamic"
-	},
     {
-        "question": "Federal industry employment (UNICOR)",
-        "options": [
-            {
-                "option": "Yes",
-                "male": false,
-                "female": -1
-            },
-            {
-                "option": "No",
-                "male": false,
-                "female": 0
-            }
-        ],
-        "type": "dynamic"
-    },
-	{
 		"question": "Drug treatment while incarcerated",
 		"options": [
 			{
@@ -380,22 +301,6 @@
 				"option": "Need indicated but no treatment during incarceration",
 				"male": 0,
 				"female": 0
-			}
-		],
-        "type": "dynamic"
-	},
-	{
-		"question": "Drug education while incarcerated",
-		"options": [
-			{
-				"option": "No",
-				"male": 0,
-				"female": false
-			},
-			{
-				"option": "Yes",
-				"male": -1,
-				"female": false
 			}
 		],
         "type": "dynamic"
