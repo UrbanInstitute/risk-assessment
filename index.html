@@ -101,33 +101,49 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <p class="introText">Because the risk factors for reoffending can differ between men and women, DOJ developed a separate tool for each gender with slightly different items and scoring. The table below shows how the risk score corresponds with the risk categories for males and females. (See the <a href="https://nij.ojp.gov/sites/g/files/xyckuh171/files/media/document/the-first-step-act-of-2018-risk-and-needs-assessment-system_1.pdf" target="_blank">full DOJ report</a> for more information on scoring and how the tools were developed.)</p>
 
         <table class="scoreCutoffsTable">
-            <thead>
+            <col>
+            <colgroup span="2"></colgroup>
+            <colgroup span="2"></colgroup>
+            <tr>
                 <td></td>
-                <td>Male</td>
-                <td>Female</td>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Minimum</td>
-                    <td><=10</td>
-                    <td><=9</td>
-                </tr>
-                <tr>
-                    <td>Low</td>
-                    <td>11-33</td>
-                    <td>10-29</td>
-                </tr>
-                <tr>
-                    <td>Medium</td>
-                    <td>34-45</td>
-                    <td>30-45</td>
-                </tr>
-                <tr>
-                    <td>High</td>
-                    <td>>45</td>
-                    <td>>45</td>
-                </tr>
-            </tbody>
+                <th colspan="2" scope="colgroup">General model</th>
+                <th colspan="2" scope="colgroup">Violent model</th>
+            </tr>
+            <tr>
+                <th></th>
+                <th scope="col">Male</th>
+                <th scope="col">Female</th>
+                <th scope="col">Male</th>
+                <th scope="col">Female</th>
+            </tr>
+            <tr>
+                <td scope="row">Minimum</td>
+                <td><=10</td>
+                <td><=5</td>
+                <td><=6</td>
+                <td><=2</td>
+            </tr>
+            <tr>
+                <td scope="row">Low</td>
+                <td>11-30</td>
+                <td>6-31</td>
+                <td>7-24</td>
+                <td>3-19</td>
+            </tr>
+            <tr>
+                <td scope="row">Medium</td>
+                <td>31-43</td>
+                <td>32-49</td>
+                <td>25-30</td>
+                <td>20-25</td>
+            </tr>
+            <tr>
+                <td scope="row">High</td>
+                <td>>=44</td>
+                <td>>=50</td>
+                <td>>=31</td>
+                <td>>=26</td>
+            </tr>
         </table>
 
         <p class="introText">In the interactive PATTERN tool below, start by selecting a gender. Then, select a response for each question. The results at the bottom, including the risk score and risk category, will update automatically.</p>
