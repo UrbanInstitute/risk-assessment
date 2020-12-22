@@ -141,9 +141,9 @@ function populateQuestions(questionDiv) {
         .attr("class", "prompt")
         .html(function(d, i){ return "<span class='qNum'>" + (i + 1) + "</span>. " + d.question; })
 
-    // prompt.append("div")
-    //     .attr("class", "errorMark")
-    //     .text("*")
+    prompt.append("div")
+        .attr("class", "desc")
+        .html(function(d) { return d.desc; })
 
     var option = questionDiv.append("div")
         .selectAll(".option")

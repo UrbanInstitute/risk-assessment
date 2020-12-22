@@ -127,7 +127,7 @@ section.quizBody {
 
 section.quizBody.hidden {
     /*display: none;*/
-    height: 1px;
+    height: 0px;
     overflow-y: hidden;
 }
 
