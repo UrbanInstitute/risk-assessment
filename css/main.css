@@ -17,18 +17,51 @@ h1 {
     max-width: 960px;
 }
 
+h2 {
+    text-align: center;
+    font-weight: lighter;
+    font-size: 26px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
 p {
     font-size: 16px;
-    line-height: 23px;
+    line-height: 28px;
     color: #353535;
+}
+
+p.instructions {
+    font-weight: bold;
+}
+
+a {
+    color: #1696d2;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #000;
+}
+
+ul {
+    list-style: initial;
+    margin: 16px 0;
+    padding-inline-start: 17px;
+}
+
+li {
+    text-align: left;
+    margin: 10px 0;
+    line-height: 28px;
 }
 
 .datePublished {
     font-style: italic;
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
     margin-top: 20px;
-    margin-bottom: 70px;
+    margin-bottom: 40px;
     font-weight: lighter;
 }
 
@@ -248,7 +281,7 @@ h3.questionCategory {
 .scoreCutoffsTable {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 60px;
+    margin: 40px 0;
 }
 
 tr {
@@ -259,6 +292,8 @@ th {
     font-weight: bold;
     background-color: #1696d2;
     color: #fff;
+    text-align: left;
+    padding-left: 10px;
 }
 
 tbody {
@@ -269,10 +304,8 @@ tbody tr {
     border-bottom: 1px solid #d2d2d2;
 }
 
-td:not([scope="row"]) {
-    /*padding-left: 10px;*/
-    /*width: 33%;*/
-    text-align: center;
+td {
+    padding-left: 10px;
 }
 
 thead td {
@@ -295,13 +328,13 @@ tr td:first-child {
     height: 50px;
 }
 #footerContent{
-    width: 700px;
+    width: 632px;
     margin: 0 auto;
 }
 .footerHeader{
     margin-top: 50px;
     margin-bottom: 8px;
-    font-size: 34px;
+    font-size: 24px;
     font-weight: bold;
     text-transform: uppercase;
     display: inline-block;
@@ -317,6 +350,7 @@ tr td:first-child {
     font-size: 14px;
     font-style: italic;
     line-height: 22px;
+    margin-bottom: 30px;
 }
 #bottomFooterCredits{
     margin-bottom: 45px;
@@ -332,7 +366,7 @@ tr td:first-child {
     font-size: 16px;
 }
 #copyright{
-    margin-bottom: 100px;
+    margin-bottom: 40px;
     display: inline-block;
 }
 
