@@ -266,16 +266,19 @@ h3.questionCategory {
 }
 
 #scoreText .label {
-    font-weight: bold;
+    /*font-weight: bold;*/
     margin: 3px 0;
 }
 
 #scoreText .riskScore,
-#scoreText .category {
+#scoreText .riskCategory {
     color: #1696d2;
-    font-weight: bold;
+    font-weight: normal;
 }
 
+.earlyReleaseEligibility {
+    margin-top: 30px;
+}
 
 /*********** TABLE STYLES **********************/
 .scoreCutoffsTable {

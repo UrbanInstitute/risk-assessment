@@ -83,9 +83,9 @@ function showScore(){
         else if(cutPoints[gender]["medium"] >= score && cutPoints[gender]["low"] < score) category = "Medium"
         else category = "High"
 
-        d3.select("#scoreText .patternResults .gender").text(gender);
-        d3.select("#scoreText .riskScore").text(score);
-        d3.select("#scoreText .category").text(category);
+        // d3.select("#scoreText .patternResults .gender").text(gender);
+        d3.select("#scoreText .overallRiskScore .riskScore").text(score);
+        d3.select("#scoreText .overallRiskScore .riskCategory").text(category);
         d3.select("#scoreText .earlyReleaseEligibility .gender").text(gender === "male" ? "he" : "she");
         d3.select("#scoreText .earlyReleaseEligibility .eligibility").text((category === "Minimum" || category === "Low") ? "eligible" : "ineligible");
 
