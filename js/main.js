@@ -55,7 +55,11 @@ function initControls(questions){
             // answerOptions.select(".pointVal").text(function(d) { return d[gender]; });
 
             answerOptions.selectAll(".optVal")
-                .html(function(d){ return d.option + " <span class='pointsLabel'>(<span class='pointVal'>" + d[gender] + "</span> " + ((d[gender] === 1 || d[gender] === -1) ? "point" : "points") + ")</span>"; })
+                .html(function(d){
+                    if(d[gender] === null) {
+                        return d.option + " <span class='pointsLabel'>(<span class='pointVal'>N/A</span>)</span>";
+                    }
+                    return d.option + " <span class='pointsLabel'>(<span class='pointVal'>" + d[gender] + "</span> " + ((d[gender] === 1 || d[gender] === -1) ? "point" : "points") + ")</span>"; })
 
             showScore()
 
