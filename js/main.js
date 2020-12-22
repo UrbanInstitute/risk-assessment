@@ -101,7 +101,7 @@ function showScore(){
         else if(generalCategory === "Low" && violentCategory === "Low") isEligible = true;
         else if((generalCategory === "Minimum" && violentCategory === "Low") || (generalCategory === "Low" && violentCategory === "Minimum")) isEligible = true;
 
-        d3.select("#scoreText .earlyReleaseEligibility .eligibility").classed("hidden", isEligible ? true : false);
+        d3.select("#scoreText .earlyReleaseEligibility .eligibility").classed("hide", isEligible ? true : false);
     } else {
         // ????
     }
