@@ -4,13 +4,25 @@
         "options": [
             {
                 "option": "No",
-                "male": 0,
-                "female": null
+                "male": {
+                    "general": 0,
+                    "violent": 0
+                },
+                "female": {
+                    "general": null,
+                    "violent": 0
+                }
             },
             {
                 "option": "Yes",
-                "male": 5,
-                "female": null
+                "male": {
+                    "general": 5,
+                    "violent": 5
+                },
+                "female": {
+                    "general": null,
+                    "violent": 3
+                }
             }
         ],
         "type": "static"
@@ -20,12 +32,18 @@
         "options": [
             {
                 "option": "No",
-                "male": 0,
+                "male": {
+                    "general": 0,
+                    "violent": null
+                },
                 "female": false
             },
             {
                 "option": "Yes",
-                "male": 1,
+                "male": {
+                    "general": 1,
+                    "violent": null
+                },
                 "female": false
             }
         ],
@@ -36,33 +54,69 @@
         "options": [
             {
                 "option": "0-1 points",
-                "male": 0,
-                "female": 0
+                "male": {
+                    "general": 0,
+                    "violent": 0
+                },
+                "female": {
+                    "general": 0,
+                    "violent": 0
+                }
             },
             {
                 "option": "2-3 points",
-                "male": 8,
-                "female": 8
+                "male": {
+                    "general": 8,
+                    "violent": 4
+                },
+                "female": {
+                    "general": 8,
+                    "violent": 4
+                }
             },
             {
                 "option": "4-6 points",
-                "male": 16,
-                "female": 16
+                "male": {
+                    "general": 16,
+                    "violent": 8
+                },
+                "female": {
+                    "general": 16,
+                    "violent": 8
+                }
             },
             {
                 "option": "7-9 points",
-                "male": 24,
-                "female": 24
+                "male": {
+                    "general": 24,
+                    "violent": 12
+                },
+                "female": {
+                    "general": 24,
+                    "violent": 12
+                }
             },
             {
                 "option": "10-12 points",
-                "male": 32,
-                "female": 32
+                "male": {
+                    "general": 32,
+                    "violent": 16
+                },
+                "female": {
+                    "general": 32,
+                    "violent": 16
+                }
             },
             {
                 "option": ">12 points",
-                "male": 40,
-                "female": 40
+                "male": {
+                    "general": 40,
+                    "violent": 20
+                },
+                "female": {
+                    "general": 40,
+                    "violent": 20
+                }
             }
         ],
         "type": "static"
@@ -72,33 +126,69 @@
         "options": [
             {
                 "option": "> 60",
-                "male": 0,
-                "female": 0
+                "male": {
+                    "general": 0,
+                    "violent": 0
+                },
+                "female": {
+                    "general": 0,
+                    "violent": 0
+                }
             },
             {
                 "option": "51-60",
-                "male": 7,
-                "female": 5
+                "male": {
+                    "general": 7,
+                    "violent": 4
+                },
+                "female": {
+                    "general": 5,
+                    "violent": 1
+                }
             },
             {
                 "option": "41-50",
-                "male": 14,
-                "female": 10
+                "male": {
+                    "general": 14,
+                    "violent": 8
+                },
+                "female": {
+                    "general": 10,
+                    "violent": 2
+                }
             },
             {
                 "option": "30-40",
-                "male": 21,
-                "female": 15
+                "male": {
+                    "general": 21,
+                    "violent":12
+                },
+                "female": {
+                    "general": 15,
+                    "violent": 3
+                }
             },
             {
                 "option": "26-29",
-                "male": 28,
-                "female": 20
+                "male": {
+                    "general": 28,
+                    "violent": 16
+                },
+                "female": {
+                    "general": 20,
+                    "violent": 4
+                }
             },
             {
                 "option": "18-25",
-                "male": 35,
-                "female": 25
+                "male": {
+                    "general": 35,
+                    "violent": 20
+                },
+                "female": {
+                    "general": 25,
+                    "violent": 5
+                }
             }
         ],
         "type": "dynamic"
@@ -108,23 +198,47 @@
         "options": [
             {
                 "option": "0",
-                "male": 0,
-                "female": 0
+                "male": {
+                    "general": 0,
+                    "violent": 0
+                },
+                "female": {
+                    "general": 0,
+                    "violent": 0
+                }
             },
             {
                 "option": "1",
-                "male": 1,
-                "female": 1
+                "male": {
+                    "general": 1,
+                    "violent": 1
+                },
+                "female": {
+                    "general": 1,
+                    "violent": 1
+                }
             },
             {
                 "option": "2",
-                "male": 2,
-                "female": 2
+                "male": {
+                    "general": 2,
+                    "violent": 2
+                },
+                "female": {
+                    "general": 2,
+                    "violent": 2
+                }
             },
             {
                 "option": ">2",
-                "male": 3,
-                "female": 3
+                "male": {
+                    "general": 3,
+                    "violent": 3
+                },
+                "female": {
+                    "general": 3,
+                    "violent": 3
+                }
             }
         ],
         "type": "dynamic"
@@ -134,23 +248,47 @@
         "options": [
             {
                 "option": "0",
-                "male": 0,
-                "female": 0
+                "male": {
+                    "general": 0,
+                    "violent": 0
+                },
+                "female": {
+                    "general": 0,
+                    "violent": 0
+                }
             },
             {
                 "option": "1",
-                "male": 2,
-                "female": 1
+                "male": {
+                    "general": 2,
+                    "violent": 2
+                },
+                "female": {
+                    "general": 1,
+                    "violent": 1
+                }
             },
             {
                 "option": "2",
-                "male": 4,
-                "female": 2
+                "male": {
+                    "general": 4,
+                    "violent": 4
+                },
+                "female": {
+                    "general": 2,
+                    "violent": 2
+                }
             },
             {
                 "option": ">2",
-                "male": 6,
-                "female": 3
+                "male": {
+                    "general": 6,
+                    "violent": 6
+                },
+                "female": {
+                    "general": 3,
+                    "violent": 3
+                }
             }
         ],
         "type": "dynamic"
@@ -160,23 +298,47 @@
     "options": [
         {
             "option": "No infractions/>12 months",
-            "male": 0,
-            "female": 0
+            "male": {
+                "general": 0,
+                "violent": 0
+            },
+            "female": {
+                "general": 0,
+                "violent": 0
+            }
         },
         {
             "option": "7-12 months",
-            "male": 2,
-            "female": 2
+            "male": {
+                "general": 2,
+                "violent": 1
+            },
+            "female": {
+                "general": 2,
+                "violent": 1
+            }
         },
         {
             "option": "3-6 months",
-            "male": 4,
-            "female": 4
+            "male": {
+                "general": 4,
+                "violent": 2
+            },
+            "female": {
+                "general": 4,
+                "violent": 2
+            }
         },
         {
             "option": "<3 months",
-            "male": 6,
-            "female": 6
+            "male": {
+                "general": 6,
+                "violent": 3
+            },
+            "female": {
+                "general": 6,
+                "violent": 3
+            }
         }
         ],
         "type": "dynamic"
@@ -186,23 +348,47 @@
         "options": [
             {
                 "option": "No infractions/>12 months",
-                "male": 0,
-                "female": 0
+                "male": {
+                    "general": 0,
+                    "violent": 0
+                },
+                "female": {
+                    "general": 0,
+                    "violent": 0
+                }
             },
             {
                 "option": "7-12 months",
-                "male": 1,
-                "female": 1
+                "male": {
+                    "general": 1,
+                    "violent": 2
+                },
+                "female": {
+                    "general": 1,
+                    "violent": 1
+                }
             },
             {
                 "option": "3-6 months",
-                "male": 2,
-                "female": 2
+                "male": {
+                    "general": 2,
+                    "violent": 4
+                },
+                "female": {
+                    "general": 2,
+                    "violent": 2
+                }
             },
             {
                 "option": "<3 months",
-                "male": 3,
-                "female": 3
+                "male": {
+                    "general": 3,
+                    "violent": 6
+                },
+                "female": {
+                    "general": 3,
+                    "violent": 3
+                }
             }
         ],
         "type": "dynamic"
@@ -212,28 +398,58 @@
         "options": [
             {
                 "option": "0",
-                "male": 0,
-                "female": 0
+                "male": {
+                    "general": 0,
+                    "violent": 0
+                },
+                "female": {
+                    "general": 0,
+                    "violent": 0
+                }
             },
             {
                 "option": "1",
-                "male": -2,
-                "female": -1
+                "male": {
+                    "general": -2,
+                    "violent": -1
+                },
+                "female": {
+                    "general": -1,
+                    "violent": -1
+                }
             },
             {
                 "option": "2-3",
-                "male": -4,
-                "female": -2
+                "male": {
+                    "general": -4,
+                    "violent": -2
+                },
+                "female": {
+                    "general": -2,
+                    "violent": -2
+                }
             },
             {
                 "option": "4-10",
-                "male": -6,
-                "female": -3
+                "male": {
+                    "general": -6,
+                    "violent": -3
+                },
+                "female": {
+                    "general": -3,
+                    "violent": -3
+                }
             },
             {
                 "option": ">10",
-                "male": -8,
-                "female": -4
+                "male": {
+                    "general": -8,
+                    "violent": -4
+                },
+                "female": {
+                    "general": -4,
+                    "violent": -4
+                }
             }
         ],
         "type": "dynamic"
@@ -243,18 +459,36 @@
         "options": [
             {
                 "option": "0",
-                "male": 0,
-                "female": 0
+                "male": {
+                    "general": 0,
+                    "violent": 0
+                },
+                "female": {
+                    "general": 0,
+                    "violent": 0
+                }
             },
             {
                 "option": "1",
-                "male": -1,
-                "female": -1
+                "male": {
+                    "general": -1,
+                    "violent": -1
+                },
+                "female": {
+                    "general": -1,
+                    "violent": -1
+                }
             },
             {
                 "option": ">=2",
-                "male": -2,
-                "female": -2
+                "male": {
+                    "general": -2,
+                    "violent": -2
+                },
+                "female": {
+                    "general": -2,
+                    "violent": -2
+                }
             }
         ],
         "type": "dynamic"
@@ -264,23 +498,47 @@
         "options": [
             {
                 "option": "No need indicated",
-                "male": -9,
-                "female": -12
+                "male": {
+                    "general": -9,
+                    "violent": -3
+                },
+                "female": {
+                    "general": -12,
+                    "violent": -3
+                }
             },
             {
                 "option": "Completed residential drug treatment during incarceration",
-                "male": -6,
-                "female": -8
+                "male": {
+                    "general": -6,
+                    "violent": -2
+                },
+                "female": {
+                    "general": -8,
+                    "violent": -2
+                }
             },
             {
                 "option": "Completed drug treatment during incarceration",
-                "male": -3,
-                "female": -4
+                "male": {
+                    "general": -3,
+                    "violent": -1
+                },
+                "female": {
+                    "general": -4,
+                    "violent": -1
+                }
             },
             {
                 "option": "Need indicated but no treatment during incarceration",
-                "male": 0,
-                "female": 0
+                "male": {
+                    "general": 0,
+                    "violent": 0
+                },
+                "female": {
+                    "general": 0,
+                    "violent": 0
+                }
             }
         ],
         "type": "dynamic"
@@ -290,18 +548,36 @@
         "options": [
             {
                 "option": "Verified HS degree or GED",
-                "male": -4,
-                "female": -6
+                "male": {
+                    "general": -4,
+                    "violent": -2
+                },
+                "female": {
+                    "general": -6,
+                    "violent": -2
+                }
             },
             {
                 "option": "Enrolled and progressing in GED",
-                "male": -2,
-                "female": -3
+                "male": {
+                    "general": -2,
+                    "violent": -1
+                },
+                "female": {
+                    "general": -3,
+                    "violent": -1
+                }
             },
             {
                 "option": "No verified degree and not participating in GED program",
-                "male": 0,
-                "female": 0
+                "male": {
+                    "general": 0,
+                    "violent": 0
+                },
+                "female": {
+                    "general": 0,
+                    "violent": 0
+                }
             }
         ],
         "type": "dynamic"
@@ -312,13 +588,25 @@
         "options": [
             {
                 "option": "No",
-                "male": 0,
-                "female": 0
+                "male": {
+                    "general": 0,
+                    "violent": 0
+                },
+                "female": {
+                    "general": 0,
+                    "violent": null
+                }
             },
             {
                 "option": "Yes",
-                "male": 1,
-                "female": 3
+                "male": {
+                    "general": 1,
+                    "violent": 1
+                },
+                "female": {
+                    "general": 3,
+                    "violent": null
+                }
             }
         ],
         "type": "dynamic"
@@ -329,43 +617,91 @@
         "options": [
             {
                 "option": "None",
-                "male": 0,
-                "female": 0
+                "male": {
+                    "general": 0,
+                    "violent": 0
+                },
+                "female": {
+                    "general": 0,
+                    "violent": 0
+                }
             },
             {
                 "option": ">10 years minor",
-                "male": 1,
-                "female": 1
+                "male": {
+                    "general": 1,
+                    "violent": 1
+                },
+                "female": {
+                    "general": 1,
+                    "violent": 1
+                }
             },
             {
                 "option": ">15 years serious",
-                "male": 2,
-                "female": 2
+                "male": {
+                    "general": 2,
+                    "violent": 2
+                },
+                "female": {
+                    "general": 2,
+                    "violent": 2
+                }
             },
             {
                 "option": "5-10 years minor",
-                "male": 3,
-                "female": 3
+                "male": {
+                    "general": 3,
+                    "violent": 3
+                },
+                "female": {
+                    "general": 3,
+                    "violent": 3
+                }
             },
             {
                 "option": "10-15 years serious",
-                "male": 4,
-                "female": 4
+                "male": {
+                    "general": 4,
+                    "violent": 4
+                },
+                "female": {
+                    "general": 4,
+                    "violent": 4
+                }
             },
             {
                 "option": "<5 years minor",
-                "male": 5,
-                "female": 5
+                "male": {
+                    "general": 5,
+                    "violent": 5
+                },
+                "female": {
+                    "general": 5,
+                    "violent": 5
+                }
             },
             {
                 "option": "5-10 years serious",
-                "male": 6,
-                "female": 6
+                "male": {
+                    "general": 6,
+                    "violent": 6
+                },
+                "female": {
+                    "general": 6,
+                    "violent": 6
+                }
             },
             {
                 "option": "<5 years serious",
-                "male": 7,
-                "female": 7
+                "male": {
+                    "general": 7,
+                    "violent": 7
+                },
+                "female": {
+                    "general": 7,
+                    "violent": 7
+                }
             }
         ],
         "type": "dynamic"
@@ -375,23 +711,47 @@
         "options": [
             {
                 "option": "None",
-                "male": 0,
-                "female": 0
+                "male": {
+                    "general": 0,
+                    "violent": 0
+                },
+                "female": {
+                    "general": 0,
+                    "violent": 0
+                }
             },
             {
                 "option": ">10 years minor",
-                "male": 2,
-                "female": 3
+                "male": {
+                    "general": 2,
+                    "violent": 1
+                },
+                "female": {
+                    "general": 3,
+                    "violent": 2
+                }
             },
             {
                 "option": "5-10 years minor",
-                "male": 4,
-                "female": 6
+                "male": {
+                    "general": 4,
+                    "violent": 2
+                },
+                "female": {
+                    "general": 6,
+                    "violent": 4
+                }
             },
             {
                 "option": "<5 years minor or any serious",
-                "male": 6,
-                "female": 9
+                "male": {
+                    "general": 6,
+                    "violent": 3
+                },
+                "female": {
+                    "general": 9,
+                    "violent": 6
+                }
             }
         ],
         "type": "dynamic"

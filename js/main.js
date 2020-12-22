@@ -55,11 +55,7 @@ function initControls(questions){
             // answerOptions.select(".pointVal").text(function(d) { return d[gender]; });
 
             answerOptions.selectAll(".optVal")
-                .html(function(d){
-                    if(d[gender] === null) {
-                        return d.option + " <span class='pointsLabel'>(<span class='pointVal'>N/A</span>)</span>";
-                    }
-                    return d.option + " <span class='pointsLabel'>(<span class='pointVal'>" + d[gender] + "</span> " + ((d[gender] === 1 || d[gender] === -1) ? "point" : "points") + ")</span>"; })
+                .html(function(d){ return populatePointValues(d, gender); });
 
             showScore()
 
@@ -87,7 +83,7 @@ function showScore(){
         qs.each(function(){
             // console.log(d)
             var datum = d3.select(d3.select(this).select(".checkbox.active").node().parentNode).datum()
-            score += datum[gender]
+            score += datum[gender]["general"]
 
         })
         // console.log(score)
@@ -169,7 +165,25 @@ function populateQuestions(questionDiv) {
 
     option.append("div")
         .attr("class", "optVal")
-        .html(function(d){ return d.option + " <span class='pointsLabel'>(<span class='pointVal'>" + d.male + "</span> " + ((d.male === 1 || d.male === -1) ? "point" : "points") + ")</span>"; })
+        .html(function(d) { return populatePointValues(d, "male"); });
 }
 
+function populatePointValues(data, gender) {
+    console.log(data, gender);
+    var option = data.option,
+        generalPoints = data[gender]["general"],
+        violentPoints = data[gender]["violent"],
+        generalPointsText = "General: " + generalPoints + " " + ((generalPoints === 1 || generalPoints === -1) ? "point" : "points") + "; ",
+        violentPointsText = "Violent: " + violentPoints + " " + ((violentPoints === 1 || violentPoints === -1) ? "point" : "points");
+
+    if(generalPoints === null) {
+        generalPointsText = "General: N/A; ";
+    }
+
+    if(violentPoints === null) {
+        violentPointsText = "Violent: N/A";
+    }
+
+    return option + " <span class='pointsLabel'>(" + generalPointsText + violentPointsText + ")</span>";
+}
 init()
