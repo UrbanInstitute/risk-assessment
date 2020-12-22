@@ -56,6 +56,10 @@ li {
     line-height: 28px;
 }
 
+.hidden {
+    display: none;
+}
+
 .datePublished {
     font-style: italic;
     font-size: 18px;

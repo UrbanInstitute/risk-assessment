@@ -101,7 +101,8 @@ function showScore(){
         d3.select("#scoreText .overallRiskScore .riskScore").text(score);
         d3.select("#scoreText .overallRiskScore .riskCategory").text(category);
         d3.select("#scoreText .earlyReleaseEligibility .gender").text(gender === "male" ? "he" : "she");
-        d3.select("#scoreText .earlyReleaseEligibility .eligibility").text((category === "Minimum" || category === "Low") ? "eligible" : "ineligible");
+        d3.select("#scoreText .earlyReleaseEligibility .eligibility").classed("hidden", (category === "Minimum" || category === "Low") ? true : false);
+        // d3.select("#scoreText .earlyReleaseEligibility .eligibility").text((category === "Minimum" || category === "Low") ? "eligible" : "ineligible");
 
     }else{
 
