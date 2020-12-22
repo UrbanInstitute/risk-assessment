@@ -31,13 +31,23 @@ function initControls(questions){
                 })
                 .classed("disabled", false)
 
-            var num = 0;
+            var staticQnum = 0;
 
-            question.select(".qNum")
+            question.select("#staticQuestions .qNum")
                 .text(function(d, i){
                     if(d.options.filter(function(o){ return o[gender] === false }).length == 0){
-                        num += 1
-                        return numToWord(num)
+                        staticQnum += 1
+                        return staticQnum;
+                    }
+                })
+
+            var dynamicQnum = 0;
+
+            question.select("#dynamicQuestions .qNum")
+                .text(function(d, i){
+                    if(d.options.filter(function(o){ return o[gender] === false }).length == 0){
+                        dynamicQnum += 1
+                        return dynamicQnum;
                     }
                 })
 
@@ -124,12 +134,8 @@ function populateQuestions(questionDiv) {
         })
 
     prompt.append("div")
-        .attr("class", "qNum")
-        .text(function(d, i){ return numToWord(i+1); })
-
-    prompt.append("div")
         .attr("class", "prompt")
-        .html(function(d){ return d.question; })
+        .html(function(d, i){ return "<span class='qNum'>" + (i + 1) + "</span>. " + d.question; })
 
     // prompt.append("div")
     //     .attr("class", "errorMark")
@@ -159,55 +165,6 @@ function populateQuestions(questionDiv) {
     option.append("div")
         .attr("class", "optVal")
         .html(function(d){ return d.option + " <span class='pointsLabel'>(<span class='pointVal'>" + d.male + "</span> " + ((d.male === 1 || d.male === -1) ? "point" : "points") + ")</span>"; })
-}
-
-function numToWord(number) {
-    switch(number) {
-        case 1:
-            return "one";
-            break;
-        case 2:
-            return "two";
-            break;
-        case 3:
-            return "three";
-            break;
-        case 4:
-            return "four";
-            break;
-        case 5:
-            return "five";
-            break;
-        case 6:
-            return "six";
-            break;
-        case 7:
-            return "seven";
-            break;
-        case 8:
-            return "eight";
-            break;
-        case 9:
-            return "nine";
-            break;
-        case 10:
-            return "ten";
-            break;
-        case 11:
-            return "eleven";
-            break;
-        case 12:
-            return "twelve";
-            break;
-        case 13:
-            return "thirteen";
-            break;
-        case 14:
-            return "fourteen";
-            break;
-        default:
-            console.log("The number of questions exceeds fourteen.");
-    }
 }
 
 init()
