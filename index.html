@@ -254,7 +254,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     $(window).on("load", function() {  // perform calculations only after DOM is fully rendered
         if ($(window).width() >= 768) {
             $(function() {
-                var quizBodyTop = $(".quizBody")[0].getBoundingClientRect().top + $(window).scrollTop(); //get the offset top of the element
+                var quizBodyTop = $(".selectSexButtons")[0].getBoundingClientRect().top + $(window).scrollTop(); //get the offset top of the element
 
                 $(window).scroll(function() {
                     // console.log($(window).scrollTop() - toolDropdownSelectorTop, $(".main")[0].getBoundingClientRect().bottom);
@@ -263,17 +263,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         // $('#scoreText').addClass("sticky");
                         // if main div is at the top, unstick score box so it scrolls away instead
                         // of remaining fixed over the footer
-                        if($(".main")[0].getBoundingClientRect().bottom < 368) {
+                        if($(".main")[0].getBoundingClientRect().bottom < 402) {
+                            $(".selectSexButtons").removeClass("sticky");
                             $("#scoreText").removeClass("sticky");
-                            $("#scoreText").addClass("unstick");
+                            $(".main").removeClass("morePaddingTop");
+                            // $("#scoreText").addClass("unstick");
                         }
                         // if score box is at the top but bottom of main div isn't, make it sticky
                         else {
+                            $(".selectSexButtons").addClass("sticky");
                             $("#scoreText").addClass("sticky");
+                            $(".main").addClass("morePaddingTop");  // need to add a padding to the top of .main equivalent to the height of the sex selector buttons so when those buttons are sticky and removed from the DOM flow, the height of .main doesn't change.
                         }
                     }
                     else {
+                        $(".selectSexButtons").removeClass("sticky");
                         $('#scoreText').removeClass("sticky");
+                        $(".main").removeClass("morePaddingTop");
                     }
                 });
             });

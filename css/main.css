@@ -9,6 +9,10 @@ body{
     margin: 0 auto;
 }
 
+.morePaddingTop {
+    padding-top: 74px;
+}
+
 h1 {
     text-align: center;
     margin: 150px auto 0;
@@ -72,10 +76,18 @@ li {
 .selectSexButtons {
     padding-bottom: 25px;
     padding-top: 15px;
+    width: 632px;
+    background-color: #fff;
+    z-index: 2;
 }
 
 .selectSexButtons div {
     display: inline-block;
+}
+
+.selectSexButtons.sticky {
+    position: fixed;
+    top: 50px;
 }
 
 .selectSexButtons .option {
@@ -257,7 +269,7 @@ h3.questionCategory {
 
 #scoreText.sticky {
     position: fixed;
-    top: 50px;
+    top: 114px;  /* height of fixed header (50px) + height of sex selection buttons div (74px) */
     left: calc(50% - 316px);
 }
 #scoreText .title {
