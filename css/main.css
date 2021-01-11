@@ -311,22 +311,26 @@ tr {
 
 th {
     font-weight: bold;
-    background-color: #1696d2;
-    color: #fff;
     text-align: left;
     padding-left: 10px;
+    border-bottom: 1px solid #000;
+}
+
+th[scope="colgroup"] {
+    text-align: center;
 }
 
 tbody {
     font-size: 14px;
 }
 
-tbody tr {
-    border-bottom: 1px solid #d2d2d2;
-}
-
 td {
     padding-left: 10px;
+    border-bottom: 1px solid #9d9d9d;
+}
+
+tr:first-child td:first-child {
+    border-style: none;
 }
 
 thead td {
