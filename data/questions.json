@@ -71,7 +71,7 @@
                 },
                 "female": {
                     "general": 8,
-                    "violent": 4
+                    "violent": 2
                 }
             },
             {
@@ -82,7 +82,7 @@
                 },
                 "female": {
                     "general": 16,
-                    "violent": 8
+                    "violent": 4
                 }
             },
             {
@@ -93,7 +93,7 @@
                 },
                 "female": {
                     "general": 24,
-                    "violent": 12
+                    "violent": 6
                 }
             },
             {
@@ -104,7 +104,7 @@
                 },
                 "female": {
                     "general": 32,
-                    "violent": 16
+                    "violent": 8
                 }
             },
             {
@@ -115,7 +115,7 @@
                 },
                 "female": {
                     "general": 40,
-                    "violent": 20
+                    "violent": 10
                 }
             }
         ],
@@ -361,10 +361,10 @@
                 "option": "7-12 months",
                 "male": {
                     "general": 1,
-                    "violent": 2
+                    "violent": 1
                 },
                 "female": {
-                    "general": 1,
+                    "general": 2,
                     "violent": 1
                 }
             },
@@ -372,10 +372,10 @@
                 "option": "3-6 months",
                 "male": {
                     "general": 2,
-                    "violent": 4
+                    "violent": 2
                 },
                 "female": {
-                    "general": 2,
+                    "general": 4,
                     "violent": 2
                 }
             },
@@ -383,10 +383,10 @@
                 "option": "<3 months",
                 "male": {
                     "general": 3,
-                    "violent": 6
+                    "violent": 3
                 },
                 "female": {
-                    "general": 3,
+                    "general": 6,
                     "violent": 3
                 }
             }
