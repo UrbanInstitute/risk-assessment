@@ -94,7 +94,7 @@ function showScore(){
         d3.select("#scoreText .generalRiskScore .riskCategory").text(generalCategory);
         d3.select("#scoreText .violentRiskScore .riskScore").text(violentScore);
         d3.select("#scoreText .violentRiskScore .riskCategory").text(violentCategory);
-        d3.select("#scoreText .earlyReleaseEligibility .gender").text(gender === "male" ? "he" : "she");
+        // d3.select("#scoreText .earlyReleaseEligibility .gender").text(gender === "male" ? "he" : "she");
 
         var isEligible = false;
         if(generalCategory === "Minimum" && violentCategory === "Minimum") isEligible = true;
