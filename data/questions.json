@@ -1,6 +1,7 @@
 [
     {
         "question": "Current offense was violent",
+        "desc": "PATTERN considers <a href='https://www.bop.gov/inmates/fsa/docs/fsa_pattern_violent_offense_codes.pdf' target='_blank'>these federal offenses</a> to be violent offenses.",
         "options": [
             {
                 "option": "No",
@@ -125,51 +126,18 @@
         "question": "Age at time of assessment",
         "options": [
             {
-                "option": "> 60",
+                "option": "18–25",
                 "male": {
-                    "general": 0,
-                    "violent": 0
+                    "general": 35,
+                    "violent": 20
                 },
                 "female": {
-                    "general": 0,
-                    "violent": 0
+                    "general": 25,
+                    "violent": 5
                 }
             },
             {
-                "option": "51-60",
-                "male": {
-                    "general": 7,
-                    "violent": 4
-                },
-                "female": {
-                    "general": 5,
-                    "violent": 1
-                }
-            },
-            {
-                "option": "41-50",
-                "male": {
-                    "general": 14,
-                    "violent": 8
-                },
-                "female": {
-                    "general": 10,
-                    "violent": 2
-                }
-            },
-            {
-                "option": "30-40",
-                "male": {
-                    "general": 21,
-                    "violent":12
-                },
-                "female": {
-                    "general": 15,
-                    "violent": 3
-                }
-            },
-            {
-                "option": "26-29",
+                "option": "26–29",
                 "male": {
                     "general": 28,
                     "violent": 16
@@ -180,14 +148,46 @@
                 }
             },
             {
-                "option": "18-25",
+                "option": "30–40",
                 "male": {
-                    "general": 35,
-                    "violent": 20
+                    "general": 21,
+                    "violent":12
                 },
                 "female": {
-                    "general": 25,
-                    "violent": 5
+                    "general": 15,
+                    "violent": 3
+                }
+            },
+            {
+                "option": "41–50",
+                "male": {
+                    "general": 14,
+                    "violent": 8
+                },
+                "female": {
+                    "general": 10,
+                    "violent": 2
+                }
+            },
+            {
+                "option": "51–60",
+                "male": {
+                    "general": 7,
+                    "violent": 4
+                },
+                "female": {
+                    "general": 5,
+                    "violent": 1
+                }
+            },            {
+                "option": "> 60",
+                "male": {
+                    "general": 0,
+                    "violent": 0
+                },
+                "female": {
+                    "general": 0,
+                    "violent": 0
                 }
             }
         ],
@@ -230,7 +230,7 @@
                 }
             },
             {
-                "option": ">2",
+                "option": "> 2",
                 "male": {
                     "general": 3,
                     "violent": 3
@@ -280,7 +280,7 @@
                 }
             },
             {
-                "option": ">2",
+                "option": "> 2",
                 "male": {
                     "general": 6,
                     "violent": 6
@@ -294,10 +294,10 @@
         "type": "dynamic"
     },
     {
-    "question": "Length of infraction-free time (any)",
+    "question": "Amount of time since last infraction (any)",
     "options": [
         {
-            "option": "No infractions/>12 months",
+            "option": "No infractions/> 12 months",
             "male": {
                 "general": 0,
                 "violent": 0
@@ -330,7 +330,7 @@
             }
         },
         {
-            "option": "<3 months",
+            "option": "< 3 months",
             "male": {
                 "general": 6,
                 "violent": 3
@@ -344,10 +344,10 @@
         "type": "dynamic"
     },
     {
-        "question": "Length of infraction-free time (serious and violent)",
+        "question": "Amount of time since last infraction (serious and violent)",
         "options": [
             {
-                "option": "No infractions/>12 months",
+                "option": "No infractions/> 12 months",
                 "male": {
                     "general": 0,
                     "violent": 0
@@ -380,7 +380,7 @@
                 }
             },
             {
-                "option": "<3 months",
+                "option": "< 3 months",
                 "male": {
                     "general": 3,
                     "violent": 3
@@ -456,6 +456,7 @@
     },
     {
         "question": "Work programming",
+        "desc": "The number of technical and vocational courses completed during current incarceration",
         "options": [
             {
                 "option": "0",
@@ -480,7 +481,7 @@
                 }
             },
             {
-                "option": ">=2",
+                "option": "≥2",
                 "male": {
                     "general": -2,
                     "violent": -2
@@ -544,10 +545,10 @@
         "type": "dynamic"
     },
     {
-        "question": "Education score",
+        "question": "Education",
         "options": [
             {
-                "option": "Verified HS degree or GED",
+                "option": "Verified high school degree or GED",
                 "male": {
                     "general": -4,
                     "violent": -2
@@ -558,7 +559,7 @@
                 }
             },
             {
-                "option": "Enrolled and progressing in GED",
+                "option": "Enrolled and progressing in GED program",
                 "male": {
                     "general": -2,
                     "violent": -1
@@ -584,7 +585,7 @@
     },
     {
         "question": "Noncompliance with financial responsibility",
-        "desc": "Unwillingness to use income earned during incarceration for restitution",
+        "desc": "Not applying income earned during incarceration toward restitution and dependents",
         "options": [
             {
                 "option": "No",
@@ -627,7 +628,7 @@
                 }
             },
             {
-                "option": ">10 years minor",
+                "option": "> 10 years since a minor incident",
                 "male": {
                     "general": 1,
                     "violent": 1
@@ -638,18 +639,7 @@
                 }
             },
             {
-                "option": ">15 years serious",
-                "male": {
-                    "general": 2,
-                    "violent": 2
-                },
-                "female": {
-                    "general": 2,
-                    "violent": 2
-                }
-            },
-            {
-                "option": "5-10 years minor",
+                "option": "5–10 years since a minor incident",
                 "male": {
                     "general": 3,
                     "violent": 3
@@ -660,18 +650,7 @@
                 }
             },
             {
-                "option": "10-15 years serious",
-                "male": {
-                    "general": 4,
-                    "violent": 4
-                },
-                "female": {
-                    "general": 4,
-                    "violent": 4
-                }
-            },
-            {
-                "option": "<5 years minor",
+                "option": "< 5 years since a minor incident",
                 "male": {
                     "general": 5,
                     "violent": 5
@@ -682,7 +661,30 @@
                 }
             },
             {
-                "option": "5-10 years serious",
+                "option": "> 15 years since a serious incident",
+                "male": {
+                    "general": 2,
+                    "violent": 2
+                },
+                "female": {
+                    "general": 2,
+                    "violent": 2
+                }
+            },
+            {
+                "option": "10–15 years since a serious incident",
+                "male": {
+                    "general": 4,
+                    "violent": 4
+                },
+                "female": {
+                    "general": 4,
+                    "violent": 4
+                }
+            },
+
+            {
+                "option": "5–10 years since a serious incident",
                 "male": {
                     "general": 6,
                     "violent": 6
@@ -693,7 +695,7 @@
                 }
             },
             {
-                "option": "<5 years serious",
+                "option": "< 5 years since a serious incident",
                 "male": {
                     "general": 7,
                     "violent": 7
@@ -721,7 +723,7 @@
                 }
             },
             {
-                "option": ">10 years minor",
+                "option": "> 10 years minor",
                 "male": {
                     "general": 2,
                     "violent": 1
@@ -743,7 +745,7 @@
                 }
             },
             {
-                "option": "<5 years minor or any serious",
+                "option": "< 5 years minor or any serious",
                 "male": {
                     "general": 6,
                     "violent": 3
