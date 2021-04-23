@@ -1,42 +1,29 @@
 [
-	{
-		"question": "Age at first conviction",
-		"options": [
-			{
-				"option": "> 35",
-				"male": 0,
-				"female": 0
-			},
-			{
-				"option": "25–34",
-				"male": 4,
-				"female": 5
-			},
-			{
-				"option": "18–24 ",
-				"male": 8,
-				"female": 10
-			},
-			{
-				"option": "< 18",
-				"male": 12,
-				"female": 15
-			}
-		],
-        "type": "static"
-	},
     {
         "question": "Current offense was violent",
+        "desc": "PATTERN considers <a href='https://www.bop.gov/inmates/fsa/docs/fsa_pattern_violent_offense_codes.pdf' target='_blank'>these federal offenses</a> to be violent offenses.",
         "options": [
             {
                 "option": "No",
-                "male": 0,
-                "female": false
+                "male": {
+                    "general": 0,
+                    "violent": 0
+                },
+                "female": {
+                    "general": null,
+                    "violent": 0
+                }
             },
             {
                 "option": "Yes",
-                "male": 4,
-                "female": false
+                "male": {
+                    "general": 5,
+                    "violent": 5
+                },
+                "female": {
+                    "general": null,
+                    "violent": 3
+                }
             }
         ],
         "type": "static"
@@ -46,12 +33,18 @@
         "options": [
             {
                 "option": "No",
-                "male": 0,
+                "male": {
+                    "general": 0,
+                    "violent": null
+                },
                 "female": false
             },
             {
                 "option": "Yes",
-                "male": 1,
+                "male": {
+                    "general": 1,
+                    "violent": null
+                },
                 "female": false
             }
         ],
@@ -62,358 +55,707 @@
         "options": [
             {
                 "option": "0-1 points",
-                "male": 0,
-                "female": 0
+                "male": {
+                    "general": 0,
+                    "violent": 0
+                },
+                "female": {
+                    "general": 0,
+                    "violent": 0
+                }
             },
             {
                 "option": "2-3 points",
-                "male": 6,
-                "female": 6
+                "male": {
+                    "general": 8,
+                    "violent": 4
+                },
+                "female": {
+                    "general": 8,
+                    "violent": 2
+                }
             },
             {
                 "option": "4-6 points",
-                "male": 12,
-                "female": 12
+                "male": {
+                    "general": 16,
+                    "violent": 8
+                },
+                "female": {
+                    "general": 16,
+                    "violent": 4
+                }
             },
             {
                 "option": "7-9 points",
-                "male": 18,
-                "female": 18
+                "male": {
+                    "general": 24,
+                    "violent": 12
+                },
+                "female": {
+                    "general": 24,
+                    "violent": 6
+                }
             },
             {
                 "option": "10-12 points",
-                "male": 24,
-                "female": 24
+                "male": {
+                    "general": 32,
+                    "violent": 16
+                },
+                "female": {
+                    "general": 32,
+                    "violent": 8
+                }
             },
             {
-                "option": "> 12 points",
-                "male": 30,
-                "female": 30
+                "option": ">12 points",
+                "male": {
+                    "general": 40,
+                    "violent": 20
+                },
+                "female": {
+                    "general": 40,
+                    "violent": 10
+                }
             }
         ],
         "type": "static"
     },
     {
-        "question": "History of violence",
+        "question": "Age at time of assessment",
         "options": [
             {
-                "option": "None",
-                "male": 0,
-                "female": 0
+                "option": "18–25",
+                "male": {
+                    "general": 35,
+                    "violent": 20
+                },
+                "female": {
+                    "general": 25,
+                    "violent": 5
+                }
             },
             {
-                "option": "> 10 years minor",
-                "male": 1,
-                "female": 1
+                "option": "26–29",
+                "male": {
+                    "general": 28,
+                    "violent": 16
+                },
+                "female": {
+                    "general": 20,
+                    "violent": 4
+                }
             },
             {
-                "option": "> 15 years serious",
-                "male": 2,
-                "female": 2
+                "option": "30–40",
+                "male": {
+                    "general": 21,
+                    "violent":12
+                },
+                "female": {
+                    "general": 15,
+                    "violent": 3
+                }
             },
             {
-                "option": "5-10 years minor",
-                "male": 3,
-                "female": 3
+                "option": "41–50",
+                "male": {
+                    "general": 14,
+                    "violent": 8
+                },
+                "female": {
+                    "general": 10,
+                    "violent": 2
+                }
             },
             {
-                "option": "10-15 years serious",
-                "male": 4,
-                "female": 4
-            },
-            {
-                "option": "< 5 years minor",
-                "male": 5,
-                "female": 5
-            },
-            {
-                "option": "5-10 years serious",
-                "male": 6,
-                "female": 6
-            },
-            {
-                "option": "< 5 years serious",
-                "male": 7,
-                "female": 7
+                "option": "51–60",
+                "male": {
+                    "general": 7,
+                    "violent": 4
+                },
+                "female": {
+                    "general": 5,
+                    "violent": 1
+                }
+            },            {
+                "option": "> 60",
+                "male": {
+                    "general": 0,
+                    "violent": 0
+                },
+                "female": {
+                    "general": 0,
+                    "violent": 0
+                }
             }
         ],
-        "type": "static"
+        "type": "dynamic"
     },
     {
-        "question": "History of escapes",
+        "question": "Infraction convictions (any)",
         "options": [
             {
-                "option": "None",
-                "male": 0,
-                "female": 0
+                "option": "0",
+                "male": {
+                    "general": 0,
+                    "violent": 0
+                },
+                "female": {
+                    "general": 0,
+                    "violent": 0
+                }
             },
             {
-                "option": "> 10 years minor",
-                "male": 2,
-                "female": 2
+                "option": "1",
+                "male": {
+                    "general": 1,
+                    "violent": 1
+                },
+                "female": {
+                    "general": 1,
+                    "violent": 1
+                }
             },
             {
-                "option": "5-10 years minor",
-                "male": 4,
-                "female": 4
+                "option": "2",
+                "male": {
+                    "general": 2,
+                    "violent": 2
+                },
+                "female": {
+                    "general": 2,
+                    "violent": 2
+                }
             },
             {
-                "option": "< 5 years minor or any serious",
-                "male": 6,
-                "female": 6
+                "option": "> 2",
+                "male": {
+                    "general": 3,
+                    "violent": 3
+                },
+                "female": {
+                    "general": 3,
+                    "violent": 3
+                }
             }
         ],
-        "type": "static"
+        "type": "dynamic"
     },
     {
-        "question": "Voluntary surrender",
+        "question": "Infraction convictions (serious and violent)",
         "options": [
             {
-                "option": "Yes",
-                "male": -12,
-                "female": -9
+                "option": "0",
+                "male": {
+                    "general": 0,
+                    "violent": 0
+                },
+                "female": {
+                    "general": 0,
+                    "violent": 0
+                }
             },
             {
-                "option": "No",
-                "male": 0,
-                "female": 0
+                "option": "1",
+                "male": {
+                    "general": 2,
+                    "violent": 2
+                },
+                "female": {
+                    "general": 1,
+                    "violent": 1
+                }
+            },
+            {
+                "option": "2",
+                "male": {
+                    "general": 4,
+                    "violent": 4
+                },
+                "female": {
+                    "general": 2,
+                    "violent": 2
+                }
+            },
+            {
+                "option": "> 2",
+                "male": {
+                    "general": 6,
+                    "violent": 6
+                },
+                "female": {
+                    "general": 3,
+                    "violent": 3
+                }
             }
         ],
-        "type": "static"
+        "type": "dynamic"
     },
     {
-        "question": "Education score",
+    "question": "Amount of time since last infraction (any)",
+    "options": [
+        {
+            "option": "No infractions/> 12 months",
+            "male": {
+                "general": 0,
+                "violent": 0
+            },
+            "female": {
+                "general": 0,
+                "violent": 0
+            }
+        },
+        {
+            "option": "7-12 months",
+            "male": {
+                "general": 2,
+                "violent": 1
+            },
+            "female": {
+                "general": 2,
+                "violent": 1
+            }
+        },
+        {
+            "option": "3-6 months",
+            "male": {
+                "general": 4,
+                "violent": 2
+            },
+            "female": {
+                "general": 4,
+                "violent": 2
+            }
+        },
+        {
+            "option": "< 3 months",
+            "male": {
+                "general": 6,
+                "violent": 3
+            },
+            "female": {
+                "general": 6,
+                "violent": 3
+            }
+        }
+        ],
+        "type": "dynamic"
+    },
+    {
+        "question": "Amount of time since last infraction (serious and violent)",
         "options": [
             {
-                "option": "High school degree or GED-verified",
-                "male": false,
-                "female": -2
+                "option": "No infractions/> 12 months",
+                "male": {
+                    "general": 0,
+                    "violent": 0
+                },
+                "female": {
+                    "general": 0,
+                    "violent": 0
+                }
             },
             {
-                "option": "Enrolled and progressing in GED",
-                "male": false,
-                "female": -1
+                "option": "7-12 months",
+                "male": {
+                    "general": 1,
+                    "violent": 1
+                },
+                "female": {
+                    "general": 2,
+                    "violent": 1
+                }
+            },
+            {
+                "option": "3-6 months",
+                "male": {
+                    "general": 2,
+                    "violent": 2
+                },
+                "female": {
+                    "general": 4,
+                    "violent": 2
+                }
+            },
+            {
+                "option": "< 3 months",
+                "male": {
+                    "general": 3,
+                    "violent": 3
+                },
+                "female": {
+                    "general": 6,
+                    "violent": 3
+                }
+            }
+        ],
+        "type": "dynamic"
+    },
+    {
+        "question": "Number of programs completed (any)",
+        "options": [
+            {
+                "option": "0",
+                "male": {
+                    "general": 0,
+                    "violent": 0
+                },
+                "female": {
+                    "general": 0,
+                    "violent": 0
+                }
+            },
+            {
+                "option": "1",
+                "male": {
+                    "general": -2,
+                    "violent": -1
+                },
+                "female": {
+                    "general": -1,
+                    "violent": -1
+                }
+            },
+            {
+                "option": "2-3",
+                "male": {
+                    "general": -4,
+                    "violent": -2
+                },
+                "female": {
+                    "general": -2,
+                    "violent": -2
+                }
+            },
+            {
+                "option": "4-10",
+                "male": {
+                    "general": -6,
+                    "violent": -3
+                },
+                "female": {
+                    "general": -3,
+                    "violent": -3
+                }
+            },
+            {
+                "option": ">10",
+                "male": {
+                    "general": -8,
+                    "violent": -4
+                },
+                "female": {
+                    "general": -4,
+                    "violent": -4
+                }
+            }
+        ],
+        "type": "dynamic"
+    },
+    {
+        "question": "Work programming",
+        "desc": "The number of technical and vocational courses completed during current incarceration",
+        "options": [
+            {
+                "option": "0",
+                "male": {
+                    "general": 0,
+                    "violent": 0
+                },
+                "female": {
+                    "general": 0,
+                    "violent": 0
+                }
+            },
+            {
+                "option": "1",
+                "male": {
+                    "general": -1,
+                    "violent": -1
+                },
+                "female": {
+                    "general": -1,
+                    "violent": -1
+                }
+            },
+            {
+                "option": "≥2",
+                "male": {
+                    "general": -2,
+                    "violent": -2
+                },
+                "female": {
+                    "general": -2,
+                    "violent": -2
+                }
+            }
+        ],
+        "type": "dynamic"
+    },
+    {
+        "question": "Drug treatment while incarcerated",
+        "options": [
+            {
+                "option": "No need indicated",
+                "male": {
+                    "general": -9,
+                    "violent": -3
+                },
+                "female": {
+                    "general": -12,
+                    "violent": -3
+                }
+            },
+            {
+                "option": "Completed residential drug treatment during incarceration",
+                "male": {
+                    "general": -6,
+                    "violent": -2
+                },
+                "female": {
+                    "general": -8,
+                    "violent": -2
+                }
+            },
+            {
+                "option": "Completed drug treatment during incarceration",
+                "male": {
+                    "general": -3,
+                    "violent": -1
+                },
+                "female": {
+                    "general": -4,
+                    "violent": -1
+                }
+            },
+            {
+                "option": "Need indicated but no treatment during incarceration",
+                "male": {
+                    "general": 0,
+                    "violent": 0
+                },
+                "female": {
+                    "general": 0,
+                    "violent": 0
+                }
+            }
+        ],
+        "type": "dynamic"
+    },
+    {
+        "question": "Education",
+        "options": [
+            {
+                "option": "Verified high school degree or GED",
+                "male": {
+                    "general": -4,
+                    "violent": -2
+                },
+                "female": {
+                    "general": -6,
+                    "violent": -2
+                }
+            },
+            {
+                "option": "Enrolled and progressing in GED program",
+                "male": {
+                    "general": -2,
+                    "violent": -1
+                },
+                "female": {
+                    "general": -3,
+                    "violent": -1
+                }
             },
             {
                 "option": "No verified degree and not participating in GED program",
-                "male": false,
-                "female": 0
+                "male": {
+                    "general": 0,
+                    "violent": 0
+                },
+                "female": {
+                    "general": 0,
+                    "violent": 0
+                }
             }
         ],
-        "type": "static"
+        "type": "dynamic"
     },
-	{
-		"question": "Age at time of assessment",
-		"options": [
-			{
-				"option": "> 60",
-				"male": 0,
-				"female": 0
-			},
-			{
-				"option": "51-60",
-				"male": 6,
-				"female": 3
-			},
-			{
-				"option": "41-50",
-				"male": 12,
-				"female": 6
-			},
-			{
-				"option": "30-40",
-				"male": 18,
-				"female": 9
-			},
-			{
-				"option": "26-29",
-				"male": 24,
-				"female": 12
-			},
-			{
-				"option": "18-25",
-				"male": 30,
-				"female": 15
-			}
-		],
-        "type": "dynamic"
-	},
-	{
-		"question": "Infraction convictions (any)",
-		"options": [
-			{
-				"option": "0",
-				"male": 0,
-				"female": 0
-			},
-			{
-				"option": "1",
-				"male": 3,
-				"female": 2
-			},
-			{
-				"option": "2",
-				"male": 6,
-				"female": 4
-			},
-			{
-				"option": "> 2",
-				"male": 9,
-				"female": 6
-			}
-		],
-        "type": "dynamic"
-	},
-	{
-		"question": "Infraction convictions (serious and violent)",
-		"options": [
-			{
-				"option": "0",
-				"male": 0,
-				"female": 0
-			},
-			{
-				"option": "1",
-				"male": 2,
-				"female": 2
-			},
-			{
-				"option": "2",
-				"male": 4,
-				"female": 4
-			},
-			{
-				"option": "> 2",
-				"male": 6,
-				"female": 6
-			}
-		],
-        "type": "dynamic"
-	},
-	{
-		"question": "Number of programs completed (any)",
-		"options": [
-			{
-				"option": "0",
-				"male": 0,
-				"female": 0
-			},
-			{
-				"option": "1",
-				"male": -3,
-				"female": -2
-			},
-			{
-				"option": "2-3",
-				"male": -6,
-				"female": -4
-			},
-			{
-				"option": "4-10",
-				"male": -9,
-				"female": -6
-			},
-			{
-				"option": "> 10",
-				"male": -12,
-				"female": -8
-			}
-		],
-        "type": "dynamic"
-	},
-	{
-		"question": "Number of technical or vocational courses<sup>2</sup>",
-		"options": [
-			{
-				"option": "0",
-				"male": 0,
-				"female": 0
-			},
-			{
-				"option": "1",
-				"male": -1,
-				"female": -1
-			},
-			{
-				"option": "> 1",
-				"male": -2,
-				"female": -2
-			}
-		],
-        "type": "dynamic"
-	},
     {
-        "question": "Federal industry employment (UNICOR)",
+        "question": "Noncompliance with financial responsibility",
+        "desc": "Not applying income earned during incarceration toward restitution and dependents",
         "options": [
             {
-                "option": "Yes",
-                "male": false,
-                "female": -1
+                "option": "No",
+                "male": {
+                    "general": 0,
+                    "violent": 0
+                },
+                "female": {
+                    "general": 0,
+                    "violent": null
+                }
             },
             {
-                "option": "No",
-                "male": false,
-                "female": 0
+                "option": "Yes",
+                "male": {
+                    "general": 1,
+                    "violent": 1
+                },
+                "female": {
+                    "general": 3,
+                    "violent": null
+                }
             }
         ],
         "type": "dynamic"
     },
-	{
-		"question": "Drug treatment while incarcerated",
-		"options": [
-			{
-				"option": "No need indicated",
-				"male": -6,
-				"female": -9
-			},
-			{
-				"option": "Completed residential drug treatment during incarceration",
-				"male": -4,
-				"female": -6
-			},
-			{
-				"option": "Completed drug treatment during incarceration",
-				"male": -2,
-				"female": -3
-			},
-			{
-				"option": "Need indicated but no treatment during incarceration",
-				"male": 0,
-				"female": 0
-			}
-		],
+    {
+        "question": "History of violence",
+        "desc": "PATTERN considers <a href='https://www.bop.gov/inmates/fsa/docs/fsa_pattern_violent_offense_codes.pdf' target='_blank'>these federal offenses</a> to be violent offenses.",
+        "options": [
+            {
+                "option": "None",
+                "male": {
+                    "general": 0,
+                    "violent": 0
+                },
+                "female": {
+                    "general": 0,
+                    "violent": 0
+                }
+            },
+            {
+                "option": "> 10 years since a minor incident",
+                "male": {
+                    "general": 1,
+                    "violent": 1
+                },
+                "female": {
+                    "general": 1,
+                    "violent": 1
+                }
+            },
+            {
+                "option": "5–10 years since a minor incident",
+                "male": {
+                    "general": 3,
+                    "violent": 3
+                },
+                "female": {
+                    "general": 3,
+                    "violent": 3
+                }
+            },
+            {
+                "option": "< 5 years since a minor incident",
+                "male": {
+                    "general": 5,
+                    "violent": 5
+                },
+                "female": {
+                    "general": 5,
+                    "violent": 5
+                }
+            },
+            {
+                "option": "> 15 years since a serious incident",
+                "male": {
+                    "general": 2,
+                    "violent": 2
+                },
+                "female": {
+                    "general": 2,
+                    "violent": 2
+                }
+            },
+            {
+                "option": "10–15 years since a serious incident",
+                "male": {
+                    "general": 4,
+                    "violent": 4
+                },
+                "female": {
+                    "general": 4,
+                    "violent": 4
+                }
+            },
+
+            {
+                "option": "5–10 years since a serious incident",
+                "male": {
+                    "general": 6,
+                    "violent": 6
+                },
+                "female": {
+                    "general": 6,
+                    "violent": 6
+                }
+            },
+            {
+                "option": "< 5 years since a serious incident",
+                "male": {
+                    "general": 7,
+                    "violent": 7
+                },
+                "female": {
+                    "general": 7,
+                    "violent": 7
+                }
+            }
+        ],
         "type": "dynamic"
-	},
-	{
-		"question": "Drug education while incarcerated",
-		"options": [
-			{
-				"option": "No",
-				"male": 0,
-				"female": false
-			},
-			{
-				"option": "Yes",
-				"male": -1,
-				"female": false
-			}
-		],
+    },
+    {
+        "question": "History of escape attempts",
+        "options": [
+            {
+                "option": "None",
+                "male": {
+                    "general": 0,
+                    "violent": 0
+                },
+                "female": {
+                    "general": 0,
+                    "violent": 0
+                }
+            },
+            {
+                "option": "> 10 years minor",
+                "male": {
+                    "general": 2,
+                    "violent": 1
+                },
+                "female": {
+                    "general": 3,
+                    "violent": 2
+                }
+            },
+            {
+                "option": "5-10 years minor",
+                "male": {
+                    "general": 4,
+                    "violent": 2
+                },
+                "female": {
+                    "general": 6,
+                    "violent": 4
+                }
+            },
+            {
+                "option": "< 5 years minor or any serious",
+                "male": {
+                    "general": 6,
+                    "violent": 3
+                },
+                "female": {
+                    "general": 9,
+                    "violent": 6
+                }
+            }
+        ],
         "type": "dynamic"
-	},
-	{
-		"question": "Noncompliance with financial responsibility",
-		"options": [
-			{
-				"option": "No",
-				"male": false,
-				"female": 0
-			},
-			{
-				"option": "Yes",
-				"male": false,
-				"female": 3
-			}
-		],
-        "type": "dynamic"
-	}
+    }
 ]

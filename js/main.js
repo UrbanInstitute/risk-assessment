@@ -31,13 +31,23 @@ function initControls(questions){
                 })
                 .classed("disabled", false)
 
-            var num = 0;
+            var staticQnum = 0;
 
-            question.select(".qNum")
+            question.select("#staticQuestions .qNum")
                 .text(function(d, i){
                     if(d.options.filter(function(o){ return o[gender] === false }).length == 0){
-                        num += 1
-                        return numToWord(num)
+                        staticQnum += 1
+                        return staticQnum;
+                    }
+                })
+
+            var dynamicQnum = 0;
+
+            question.select("#dynamicQuestions .qNum")
+                .text(function(d, i){
+                    if(d.options.filter(function(o){ return o[gender] === false }).length == 0){
+                        dynamicQnum += 1
+                        return dynamicQnum;
                     }
                 })
 
@@ -45,7 +55,7 @@ function initControls(questions){
             // answerOptions.select(".pointVal").text(function(d) { return d[gender]; });
 
             answerOptions.selectAll(".optVal")
-                .html(function(d){ return d.option + " <span class='pointsLabel'>(<span class='pointVal'>" + d[gender] + "</span> " + ((d[gender] === 1 || d[gender] === -1) ? "point" : "points") + ")</span>"; })
+                .html(function(d){ return populatePointValues(d, gender); });
 
             showScore()
 
@@ -57,40 +67,43 @@ function initControls(questions){
 }
 
 function showScore(){
-    var cutPoints = {
-        "male": {"minimum" : 10, "low": 33, "medium": 45 },
-        "female": {"minimum": 9, "low": 29, "medium": 45 }
-    }
+
     var qs = d3.selectAll(".question:not(.hide)")
     qs.classed("error", function(){
         return (d3.select(this).selectAll(".checkbox.active").nodes().length == 0)
     })
 
     if(d3.selectAll(".question.error").nodes().length == 0){
-        var score = 0,
+        var generalScore = 0,
+            violentScore = 0,
             gender = (d3.select(".selectSexButtons .option.active").classed("male")) ? "male" : "female";
 
         qs.each(function(){
             // console.log(d)
             var datum = d3.select(d3.select(this).select(".checkbox.active").node().parentNode).datum()
-            score += datum[gender]
-
+            generalScore += datum[gender]["general"],
+            violentScore += datum[gender]["violent"]
         })
+
         // console.log(score)
-        var category;
-        if(cutPoints[gender]["minimum"] >= score) category = "Minimum"
-        else if(cutPoints[gender]["low"] >= score && cutPoints[gender]["minimum"] < score) category = "Low"
-        else if(cutPoints[gender]["medium"] >= score && cutPoints[gender]["low"] < score) category = "Medium"
-        else category = "High"
+        var generalCategory = determineRiskCategory(gender, "general", generalScore);
+        var violentCategory = determineRiskCategory(gender, "violent", violentScore);
 
-        d3.select("#scoreText .patternResults .gender").text(gender);
-        d3.select("#scoreText .riskScore").text(score);
-        d3.select("#scoreText .category").text(category);
-        d3.select("#scoreText .earlyReleaseEligibility .gender").text(gender === "male" ? "he" : "she");
-        d3.select("#scoreText .earlyReleaseEligibility .eligibility").text((category === "Minimum" || category === "Low") ? "eligible" : "ineligible");
+        // d3.select("#scoreText .patternResults .gender").text(gender);
+        d3.select("#scoreText .generalRiskScore .riskScore").text(generalScore);
+        d3.select("#scoreText .generalRiskScore .riskCategory").text(generalCategory);
+        d3.select("#scoreText .violentRiskScore .riskScore").text(violentScore);
+        d3.select("#scoreText .violentRiskScore .riskCategory").text(violentCategory);
+        // d3.select("#scoreText .earlyReleaseEligibility .gender").text(gender === "male" ? "he" : "she");
 
-    }else{
+        var isEligible = false;
+        if(generalCategory === "Minimum" && violentCategory === "Minimum") isEligible = true;
+        else if(generalCategory === "Low" && violentCategory === "Low") isEligible = true;
+        else if((generalCategory === "Minimum" && violentCategory === "Low") || (generalCategory === "Low" && violentCategory === "Minimum")) isEligible = true;
 
+        d3.select("#scoreText .earlyReleaseEligibility .eligibility").classed("hide", isEligible ? true : false);
+    } else {
+        // ????
     }
 
 }
@@ -124,16 +137,12 @@ function populateQuestions(questionDiv) {
         })
 
     prompt.append("div")
-        .attr("class", "qNum")
-        .text(function(d, i){ return numToWord(i+1); })
+        .attr("class", "prompt")
+        .html(function(d, i){ return "<span class='qNum'>" + (i + 1) + "</span>. " + d.question; })
 
     prompt.append("div")
-        .attr("class", "prompt")
-        .html(function(d){ return d.question; })
-
-    // prompt.append("div")
-    //     .attr("class", "errorMark")
-    //     .text("*")
+        .attr("class", "desc")
+        .html(function(d) { return d.desc; })
 
     var option = questionDiv.append("div")
         .selectAll(".option")
@@ -158,56 +167,50 @@ function populateQuestions(questionDiv) {
 
     option.append("div")
         .attr("class", "optVal")
-        .html(function(d){ return d.option + " <span class='pointsLabel'>(<span class='pointVal'>" + d.male + "</span> " + ((d.male === 1 || d.male === -1) ? "point" : "points") + ")</span>"; })
+        .html(function(d) { return populatePointValues(d, "male"); });
 }
 
-function numToWord(number) {
-    switch(number) {
-        case 1:
-            return "one";
-            break;
-        case 2:
-            return "two";
-            break;
-        case 3:
-            return "three";
-            break;
-        case 4:
-            return "four";
-            break;
-        case 5:
-            return "five";
-            break;
-        case 6:
-            return "six";
-            break;
-        case 7:
-            return "seven";
-            break;
-        case 8:
-            return "eight";
-            break;
-        case 9:
-            return "nine";
-            break;
-        case 10:
-            return "ten";
-            break;
-        case 11:
-            return "eleven";
-            break;
-        case 12:
-            return "twelve";
-            break;
-        case 13:
-            return "thirteen";
-            break;
-        case 14:
-            return "fourteen";
-            break;
-        default:
-            console.log("The number of questions exceeds fourteen.");
+function populatePointValues(data, gender) {
+    var option = data.option,
+        generalPoints = data[gender]["general"],
+        violentPoints = data[gender]["violent"],
+        generalPointsText = "General: " + generalPoints + " " + ((generalPoints === 1 || generalPoints === -1) ? "point" : "points") + "; ",
+        violentPointsText = "Violent: " + violentPoints + " " + ((violentPoints === 1 || violentPoints === -1) ? "point" : "points");
+
+    if(generalPoints === null) {
+        generalPointsText = "General: N/A; ";
     }
+
+    if(violentPoints === null) {
+        violentPointsText = "Violent: N/A";
+    }
+
+    return option + " <span class='pointsLabel'>(" + generalPointsText + violentPointsText + ")</span>";
 }
 
+function determineRiskCategory(gender, model, score) {
+    var cutPoints = {
+        "male": {
+            "general": {
+                "minimum" : 10, "low": 30, "medium": 43
+            },
+            "violent": {
+                "minimum": 6, "low": 24, "medium": 30
+            }
+        },
+        "female": {
+            "general": {
+                "minimum": 5, "low": 31, "medium": 49
+            },
+            "violent": {
+                "minimum": 2, "low": 19, "medium": 25
+            }
+        }
+    }
+
+    if(cutPoints[gender][model]["minimum"] >= score) return "Minimum"
+    else if(cutPoints[gender][model]["low"] >= score && cutPoints[gender][model]["minimum"] < score) return "Low"
+    else if(cutPoints[gender][model]["medium"] >= score && cutPoints[gender][model]["low"] < score) return "Medium"
+    else return "High"
+}
 init()

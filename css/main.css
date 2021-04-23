@@ -9,6 +9,10 @@ body{
     margin: 0 auto;
 }
 
+.morePaddingTop {
+    padding-top: 74px;
+}
+
 h1 {
     text-align: center;
     margin: 150px auto 0;
@@ -17,28 +21,73 @@ h1 {
     max-width: 960px;
 }
 
+h2 {
+    text-align: center;
+    font-weight: lighter;
+    font-size: 26px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
 p {
     font-size: 16px;
-    line-height: 23px;
+    line-height: 28px;
     color: #353535;
+}
+
+p.instructions {
+    font-weight: bold;
+}
+
+a {
+    color: #1696d2;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #000;
+}
+
+ul {
+    list-style: initial;
+    margin: 16px 0;
+    padding-inline-start: 17px;
+}
+
+li {
+    text-align: left;
+    margin: 10px 0;
+    line-height: 28px;
+}
+
+.hide {
+    display: none;
 }
 
 .datePublished {
     font-style: italic;
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
     margin-top: 20px;
-    margin-bottom: 70px;
+    margin-bottom: 40px;
     font-weight: lighter;
 }
 
 .selectSexButtons {
-    padding-bottom: 40px;
+    padding-bottom: 25px;
     padding-top: 15px;
+    width: 632px;
+    background-color: #fff;
+    z-index: 2;
 }
 
 .selectSexButtons div {
     display: inline-block;
+}
+
+.selectSexButtons.sticky {
+    position: fixed;
+    top: 50px;
 }
 
 .selectSexButtons .option {
@@ -94,7 +143,7 @@ section.quizBody {
 
 section.quizBody.hidden {
     /*display: none;*/
-    height: 1px;
+    height: 0px;
     overflow-y: hidden;
 }
 
@@ -125,13 +174,13 @@ h3.questionCategory {
 .promptRow{
 	margin-bottom: 5px;
 }
-.qNum{
+/*.qNum{*/
     /*display: inline-block;*/
     /*font-weight: bold;*/
-    font-size: 14px;
-    color: #1696d2;
-    text-transform: uppercase;
-}
+    /*font-size: 14px;*/
+    /*color: #1696d2;*/
+    /*text-transform: uppercase;*/
+/*}*/
 .prompt{
 	/*display: inline;*/
     /*margin-left: 5px;*/
@@ -172,10 +221,12 @@ h3.questionCategory {
     float: left;
     margin-top: 1px;
 }
+
 .checkbox.active{
     background: #1696d2;
     border: 1px solid #1696d2;
 }
+
 .optVal{
 	display: inline-block;
     margin-left: 10px;
@@ -206,7 +257,7 @@ h3.questionCategory {
 
 
 #scoreText{
-    width: 226px;
+    width: 230px;
     padding: 30px;
     background-color: #f7f7f7;
     position: absolute;
@@ -218,7 +269,7 @@ h3.questionCategory {
 
 #scoreText.sticky {
     position: fixed;
-    top: 50px;
+    top: 114px;  /* height of fixed header (50px) + height of sex selection buttons div (74px) */
     left: calc(50% - 316px);
 }
 #scoreText .title {
@@ -233,45 +284,53 @@ h3.questionCategory {
 }
 
 #scoreText .label {
-    font-weight: bold;
+    /*font-weight: bold;*/
     margin: 3px 0;
 }
 
 #scoreText .riskScore,
-#scoreText .category {
-    color: #1696d2;
-    font-weight: bold;
+#scoreText .riskCategory {
+    color: #353535;
+    font-weight: normal;
 }
 
+.earlyReleaseEligibility {
+    margin-top: 30px;
+}
 
 /*********** TABLE STYLES **********************/
 .scoreCutoffsTable {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 60px;
+    margin: 40px 0;
 }
 
 tr {
     height: 47px;
 }
 
-thead {
+th {
     font-weight: bold;
-    background-color: #1696d2;
-    color: #fff;
+    text-align: left;
+    padding-left: 10px;
+    border-bottom: 1px solid #000;
+}
+
+th[scope="colgroup"] {
+    text-align: center;
 }
 
 tbody {
     font-size: 14px;
 }
 
-tbody tr {
-    border-bottom: 1px solid #d2d2d2;
-}
-
 td {
     padding-left: 10px;
-    width: 33%;
+    border-bottom: 1px solid #9d9d9d;
+}
+
+tr:first-child td:first-child {
+    border-style: none;
 }
 
 thead td {
@@ -289,18 +348,19 @@ tr td:first-child {
 /*********************************************************************************/
 
 #footerContainer{
-    margin-top: 45px;
-    border-top: 2px solid #D2D2D2;
-    height: 50px;
+    margin-top: 40px;
+    /*border-top: 2px solid #D2D2D2;*/
+    /*height: 50px;*/
+    background-color: #f1f1f2;
 }
 #footerContent{
-    width: 700px;
+    width: 632px;
     margin: 0 auto;
 }
 .footerHeader{
     margin-top: 50px;
     margin-bottom: 8px;
-    font-size: 34px;
+    font-size: 24px;
     font-weight: bold;
     text-transform: uppercase;
     display: inline-block;
@@ -316,6 +376,7 @@ tr td:first-child {
     font-size: 14px;
     font-style: italic;
     line-height: 22px;
+    margin-bottom: 30px;
 }
 #bottomFooterCredits{
     margin-bottom: 45px;
@@ -331,7 +392,7 @@ tr td:first-child {
     font-size: 16px;
 }
 #copyright{
-    margin-bottom: 100px;
+    margin-bottom: 40px;
     display: inline-block;
 }
 
