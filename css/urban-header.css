@@ -284,7 +284,7 @@ display: inline-block;
 
 ul{
         list-style: outside none none;
-    width: 100%;
+    /*width: 100%;*/
     margin: 0 auto;
     text-align: center;
 }

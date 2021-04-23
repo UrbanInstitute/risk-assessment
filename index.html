@@ -122,6 +122,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <section class = "quizBody hidden">
                 <div id = "scoreText">
                     <div class="patternResults">
+
+                        <!-- https://codepen.io/jmorris/pen/BNaPNX -->
+                        
                         <div class="title">Results</div>
                         <div id = "resultsMen">To be eligible for early release, the general risk score must be less than 31 and the violent risk score must be less than 25.</div>
                         <div id = "resultsWomen">To be eligible for early release, the general risk score must be less than 32 and the violent risk score must be less than 20.</div>
@@ -141,10 +144,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <div class="earlyReleaseEligibility">Based on these results, this person <strong>would <span class="eligibility hide">not</span> be eligible</strong> for early release.</div>
                 </div>
 
-                <h3 class="questionCategory">Static Risk Factors</h3>
+                <h3 class="questionCategory static">Static Risk Factors</h3>
                 <div id = "staticQuestions" class="questions"></div>
 
-                <h3 class="questionCategory">Dynamic Risk Factors</h3>
+                <h3 class="questionCategory dynamic">Dynamic Risk Factors</h3>
                 <div id = "dynamicQuestions" class="questions"></div>
                 <!-- <div id = "calculate" class = "disabled">Get score</div> -->
             </section>
@@ -261,7 +264,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <script>
     $(window).on("load", function() {  // perform calculations only after DOM is fully rendered
-        if ($(window).width() >= 768) {
+        // if ($(window).width() >= 768) {
             $(function() {
                 var quizBodyTop = $(".selectSexButtons")[0].getBoundingClientRect().top + $(window).scrollTop(); //get the offset top of the element
 
@@ -272,7 +275,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         // $('#scoreText').addClass("sticky");
                         // if main div is at the top, unstick score box so it scrolls away instead
                         // of remaining fixed over the footer
-                        if($(".main")[0].getBoundingClientRect().bottom < 402) {
+                        if($(".main")[0].getBoundingClientRect().bottom < 458) {
                             $(".selectSexButtons").removeClass("sticky");
                             $("#scoreText").removeClass("sticky");
                             $(".main").removeClass("morePaddingTop");
@@ -292,7 +295,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     }
                 });
             });
-        }
+        // }
     })
 </script>
 <!--   <script>
