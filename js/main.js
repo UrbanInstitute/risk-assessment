@@ -18,10 +18,17 @@ function initControls(questions){
             if(gender === "male") {
                 d3.select(".selectSex.checkbox.male").classed("active", true);
                 d3.select(".selectSex.checkbox.female").classed("active", false);
+
+                d3.select("#resultsMen").style("display", "block")
+                d3.select("#resultsWomen").style("display", "none")
             }
             else {
                 d3.select(".selectSex.checkbox.male").classed("active", false);
                 d3.select(".selectSex.checkbox.female").classed("active", true);
+
+                d3.select("#resultsMen").style("display", "none")
+                d3.select("#resultsWomen").style("display", "block")
+
             }
 
             var question = d3.selectAll(".question")

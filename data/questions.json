@@ -1,128 +1,5 @@
 [
     {
-        "question": "Current offense was violent",
-        "desc": "PATTERN considers <a href='https://www.bop.gov/inmates/fsa/docs/fsa_pattern_violent_offense_codes.pdf' target='_blank'>these federal offenses</a> to be violent offenses.",
-        "options": [
-            {
-                "option": "No",
-                "male": {
-                    "general": 0,
-                    "violent": 0
-                },
-                "female": {
-                    "general": null,
-                    "violent": 0
-                }
-            },
-            {
-                "option": "Yes",
-                "male": {
-                    "general": 5,
-                    "violent": 5
-                },
-                "female": {
-                    "general": null,
-                    "violent": 3
-                }
-            }
-        ],
-        "type": "static"
-    },
-    {
-        "question": "Sex offense conviction",
-        "options": [
-            {
-                "option": "No",
-                "male": {
-                    "general": 0,
-                    "violent": null
-                },
-                "female": false
-            },
-            {
-                "option": "Yes",
-                "male": {
-                    "general": 1,
-                    "violent": null
-                },
-                "female": false
-            }
-        ],
-        "type": "static"
-    },
-    {
-        "question": "Criminal history score",
-        "options": [
-            {
-                "option": "0-1 points",
-                "male": {
-                    "general": 0,
-                    "violent": 0
-                },
-                "female": {
-                    "general": 0,
-                    "violent": 0
-                }
-            },
-            {
-                "option": "2-3 points",
-                "male": {
-                    "general": 8,
-                    "violent": 4
-                },
-                "female": {
-                    "general": 8,
-                    "violent": 2
-                }
-            },
-            {
-                "option": "4-6 points",
-                "male": {
-                    "general": 16,
-                    "violent": 8
-                },
-                "female": {
-                    "general": 16,
-                    "violent": 4
-                }
-            },
-            {
-                "option": "7-9 points",
-                "male": {
-                    "general": 24,
-                    "violent": 12
-                },
-                "female": {
-                    "general": 24,
-                    "violent": 6
-                }
-            },
-            {
-                "option": "10-12 points",
-                "male": {
-                    "general": 32,
-                    "violent": 16
-                },
-                "female": {
-                    "general": 32,
-                    "violent": 8
-                }
-            },
-            {
-                "option": ">12 points",
-                "male": {
-                    "general": 40,
-                    "violent": 20
-                },
-                "female": {
-                    "general": 40,
-                    "violent": 10
-                }
-            }
-        ],
-        "type": "static"
-    },
-    {
         "question": "Age at time of assessment",
         "options": [
             {
@@ -191,10 +68,134 @@
                 }
             }
         ],
-        "type": "dynamic"
+        "type": "static"
     },
     {
-        "question": "Infraction convictions (any)",
+        "question": "Current offense was violent",
+        "desc": "PATTERN considers <a href='https://www.bop.gov/inmates/fsa/docs/fsa_pattern_violent_offense_codes.pdf' target='_blank'>these federal offenses</a> to be violent offenses.",
+        "options": [
+            {
+                "option": "No",
+                "male": {
+                    "general": 0,
+                    "violent": 0
+                },
+                "female": {
+                    "general": null,
+                    "violent": 0
+                }
+            },
+            {
+                "option": "Yes",
+                "male": {
+                    "general": 5,
+                    "violent": 5
+                },
+                "female": {
+                    "general": null,
+                    "violent": 3
+                }
+            }
+        ],
+        "type": "static"
+    },
+    {
+        "question": "Current or prior sex offense conviction",
+        "options": [
+            {
+                "option": "No",
+                "male": {
+                    "general": 0,
+                    "violent": null
+                },
+                "female": false
+            },
+            {
+                "option": "Yes",
+                "male": {
+                    "general": 1,
+                    "violent": null
+                },
+                "female": false
+            }
+        ],
+        "type": "static"
+    },
+    {
+        "question": "Criminal history score",
+        "desc": "Criminal history scores are <a href = 'https://www.ussc.gov/guidelines/2018-guidelines-manual/annotated-2018-chapter-4#4a11' target = '_blank'>calculated under the US Sentencing Commission guidelines</a> and are based primarily on the length of prior prison sentences. This score can be found on the presentence investigation report.",
+        "options": [
+            {
+                "option": "0–1 points",
+                "male": {
+                    "general": 0,
+                    "violent": 0
+                },
+                "female": {
+                    "general": 0,
+                    "violent": 0
+                }
+            },
+            {
+                "option": "2–3 points",
+                "male": {
+                    "general": 8,
+                    "violent": 4
+                },
+                "female": {
+                    "general": 8,
+                    "violent": 2
+                }
+            },
+            {
+                "option": "4–6 points",
+                "male": {
+                    "general": 16,
+                    "violent": 8
+                },
+                "female": {
+                    "general": 16,
+                    "violent": 4
+                }
+            },
+            {
+                "option": "7–9 points",
+                "male": {
+                    "general": 24,
+                    "violent": 12
+                },
+                "female": {
+                    "general": 24,
+                    "violent": 6
+                }
+            },
+            {
+                "option": "10–12 points",
+                "male": {
+                    "general": 32,
+                    "violent": 16
+                },
+                "female": {
+                    "general": 32,
+                    "violent": 8
+                }
+            },
+            {
+                "option": "> 12 points",
+                "male": {
+                    "general": 40,
+                    "violent": 20
+                },
+                "female": {
+                    "general": 40,
+                    "violent": 10
+                }
+            }
+        ],
+        "type": "static"
+    },
+    {
+        "question": "Infraction convictions (all)",
         "options": [
             {
                 "option": "0",
@@ -244,7 +245,7 @@
         "type": "dynamic"
     },
     {
-        "question": "Infraction convictions (serious and violent)",
+        "question": "Infraction convictions (serious and violent only)",
         "options": [
             {
                 "option": "0",
@@ -308,7 +309,7 @@
             }
         },
         {
-            "option": "7-12 months",
+            "option": "7–12 months",
             "male": {
                 "general": 2,
                 "violent": 1
@@ -319,7 +320,7 @@
             }
         },
         {
-            "option": "3-6 months",
+            "option": "3–6 months",
             "male": {
                 "general": 4,
                 "violent": 2
@@ -344,7 +345,7 @@
         "type": "dynamic"
     },
     {
-        "question": "Amount of time since last infraction (serious and violent)",
+        "question": "Amount of time since last infraction (serious and violent only)",
         "options": [
             {
                 "option": "No infractions/> 12 months",
@@ -358,7 +359,7 @@
                 }
             },
             {
-                "option": "7-12 months",
+                "option": "7–12 months",
                 "male": {
                     "general": 1,
                     "violent": 1
@@ -369,7 +370,7 @@
                 }
             },
             {
-                "option": "3-6 months",
+                "option": "3–6 months",
                 "male": {
                     "general": 2,
                     "violent": 2
@@ -395,6 +396,7 @@
     },
     {
         "question": "Number of programs completed (any)",
+        "desc": "The <a href = 'https://www.ojp.gov/pdffiles1/nij/256084.pdf' target = '_blank'>approved programs</a>, which <a href = 'https://www.bop.gov/inmates/fsa/docs/2021_fsa_program_guide.pdf' target = '_blank'>are described here</a>, are adult continuing education, the National Parenting from Prison Program, the Life Connections Program, the BRAVE program, the Challenge Program, the Skills Program, the Sex Offender Treatment Program (residential or nonresidential), the STAGES program, and the Mental Health Step Down program.",
         "options": [
             {
                 "option": "0",
@@ -419,7 +421,7 @@
                 }
             },
             {
-                "option": "2-3",
+                "option": "2–3",
                 "male": {
                     "general": -4,
                     "violent": -2
@@ -430,7 +432,7 @@
                 }
             },
             {
-                "option": "4-10",
+                "option": "4–10",
                 "male": {
                     "general": -6,
                     "violent": -3
@@ -441,7 +443,7 @@
                 }
             },
             {
-                "option": ">10",
+                "option": "> 10",
                 "male": {
                     "general": -8,
                     "violent": -4
@@ -456,7 +458,7 @@
     },
     {
         "question": "Work programming",
-        "desc": "The number of technical and vocational courses completed during current incarceration",
+        "desc": "The number of technical, vocational, or prison-industry (UNICOR) programs completed during current incarceration.",
         "options": [
             {
                 "option": "0",
@@ -481,7 +483,7 @@
                 }
             },
             {
-                "option": "≥2",
+                "option": "> 1",
                 "male": {
                     "general": -2,
                     "violent": -2
@@ -585,7 +587,7 @@
     },
     {
         "question": "Noncompliance with financial responsibility",
-        "desc": "Not applying income earned during incarceration toward restitution and dependents",
+        "desc": "Not applying income earned during incarceration toward restitution and dependents, if applicable.",
         "options": [
             {
                 "option": "No",
@@ -734,7 +736,7 @@
                 }
             },
             {
-                "option": "5-10 years minor",
+                "option": "5–10 years minor",
                 "male": {
                     "general": 4,
                     "violent": 2

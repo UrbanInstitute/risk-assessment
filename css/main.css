@@ -402,3 +402,6 @@ tr td:first-child {
     width: 632px;
     margin: 20px auto;
 }
+.introText.large{
+    font-size: 22px;
+}
