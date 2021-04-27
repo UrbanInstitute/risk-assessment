@@ -1,0 +1,6 @@
+- edit Q on (PDF) after links
+- serena q on non-defaults
+- allison q on styling of default text, if exists
+- social assets, update header info
+- fix mobile sticky header position trigger
+- add close/open arrow to mobile sticky results, see https://codepen.io/jmorris/pen/BNaPNX

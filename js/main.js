@@ -69,6 +69,26 @@ function initControls(questions){
             d3.select(".quizBody").classed("hidden", false);
         })
 
+
+    d3.select("#mobileHide").on("click", function(){
+        if(d3.select(this).classed("arrow")){
+            d3.select(this).classed("arrow", false)
+
+            var hOrig = d3.select("#scoreText").attr("data-height")
+            d3.select("#scoreText")
+                .transition()
+                    .style("height",hOrig + "px")
+        }else{
+            d3.select(this).classed("arrow", true)
+            var h = d3.select("#scoreText").node().getBoundingClientRect().height
+            console.log(h)
+
+            d3.select("#scoreText")
+                .attr("data-height",h)
+                .transition()
+                    .style("height","94px")
+        }
+    })
     // d3.select("#calculate")
         // .on("click", showScore)
 }
