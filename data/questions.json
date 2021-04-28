@@ -616,7 +616,6 @@
     },
     {
         "question": "History of violence",
-        "desc": "PATTERN considers <a href='https://www.bop.gov/inmates/fsa/docs/fsa_pattern_violent_offense_codes.pdf' target='_blank'>these federal offenses</a> to be violent offenses.",
         "options": [
             {
                 "option": "None",
