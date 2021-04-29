@@ -724,7 +724,7 @@
                 }
             },
             {
-                "option": "> 10 years minor",
+                "option": "> 10 years since a minor attempt",
                 "male": {
                     "general": 2,
                     "violent": 1
@@ -735,7 +735,7 @@
                 }
             },
             {
-                "option": "5–10 years minor",
+                "option": "5–10 years since a minor attempt",
                 "male": {
                     "general": 4,
                     "violent": 2
@@ -746,7 +746,7 @@
                 }
             },
             {
-                "option": "< 5 years minor or any serious",
+                "option": "< 5 years since a minor or any serious attempt",
                 "male": {
                     "general": 6,
                     "violent": 3
